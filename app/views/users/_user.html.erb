@@ -1,0 +1,7 @@
+<li>
+	<h3><%= user.name %> (@<%= link_to "#{user.login}", user %>)</h3>
+	<p><%= user.email %></p>
+	<% if logged_in? %>
+		<%= link_to "Follow" %>
+	<% end %>
+</li>
