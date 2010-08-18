@@ -1,1 +1,10 @@
-<%= render :partial => "users/user_bar" %>
+<% if logged_in? %>
+	
+	<%= render :partial => 'dashboard' %>
+
+	
+<% else %>
+
+	<%= render :partial => 'welcome' %>
+
+<% end %>

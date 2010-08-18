@@ -1,9 +1,13 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
+  
+  has_many :relationships
+  has_many :relations, :through => :relationships  
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40

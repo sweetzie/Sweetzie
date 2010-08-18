@@ -1,7 +1,13 @@
 <li>
 	<h3><%= user.name %> (@<%= link_to "#{user.login}", user %>)</h3>
 	<p><%= user.email %></p>
-	<% if logged_in? %>
-		<%= link_to "Follow" %>
+	<% if logged_in? %>	
+		<% if current_user.id == user.id %>
+			<p><%= "That's you!" %></p>
+		<% elsif current_user.relations.include?(user) %>
+			<p><%= "Following" %></p>
+		<% else %>
+			<%= link_to "Follow", relationships_path(:relation_id => user), :method => :post %>
+		<% end %>
 	<% end %>
 </li>
