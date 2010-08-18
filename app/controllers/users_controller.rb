@@ -1,11 +1,21 @@
 class UsersController < ApplicationController
   
+  before_filter :login_required, :only => [:edit]
+  
   def index
     @users = User.all
   end
   
   def show
     @user = User.find(params[:id])
+  end
+  
+  def edit
+    # stuff
+  end
+  
+  def update 
+    # stuff
   end
   
   # render new.rhtml

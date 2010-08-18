@@ -1,0 +1,13 @@
+<h2>Your Settings</h2>
+
+<% form_for :user do |f| %>
+	
+	<%= f.label :login, "Username" %>
+	<%= f.text_field :login, :value => current_user.login %>
+	
+	<%= f.label :email %>
+	<%= f.text_field :email, :value => current_user.email %>
+	
+	<%= submit_tag "Save"%>
+	
+<% end %>
