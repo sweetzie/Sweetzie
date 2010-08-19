@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.people '/people', :controller => 'users'
   
   map.resources :users
+  #map.user '/:username'
 
   map.resources :relationships
 

@@ -23,7 +23,8 @@ ul { list-style-type: none;}
 	background: #ffffff;
 	margin-top: 20px;
 	padding: 10px;
-	-webkit-box-shadow: #cccccc 0px 0px 2px;	
+	-webkit-box-shadow: #cccccc 0px 0px 2px;
+	overflow: hidden;	
 }
 
 h1 { font-size: 2.5em; }
@@ -73,5 +74,18 @@ header h1 a {
 }
 
 #nav li a {
+	
+}
+
+
+.left-column {
+	
+	float:left;
+	
+}
+
+.right-column {
+	
+	float: right;
 	
 }
