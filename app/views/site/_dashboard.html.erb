@@ -1,9 +1,34 @@
 <div class="left-column">
 	<h1>Dashboard</h1>
+	
+	<div id="create-item">
+		
+	</div>
+	
+	<div class="activity-feed">
+		
+		<h3>Recently</h3>
+		
+		<ul>
+			<li>Test Feed Item</li>
+			<li>Test Feed Item</li>
+			<li>Test Feed Item</li>
+			<li>Test Feed Item</li>
+			<li>Test Feed Item</li>
+		</uL>
+		
+	</div>
+	
 </div>
 
 <div class="right-column">
 	<p>Welcome <%= current_user.login %></p>
-	<%= link_to "Send an Invitation" %>
+	<div id="send-invites">
+		
+		<p>Food is better with friends. Start sharing your favorites with yours by inviting them to join Sweetzie.</p>
+		
+		<%= link_to "Send an Invitation", :controller => 'invitations', :action => 'new' %>
+		
+	</div>
 	
 </div>

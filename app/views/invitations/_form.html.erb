@@ -1,0 +1,14 @@
+<p>You have <%= current_user.invitation_limit %> invites left.
+
+<%= error_messages_for :invitation %>
+
+<% form_for @invitation do |f| %>
+	
+	<p>
+		<%= f.label :recipient_email, "Friend's Email" %>
+		<%= f.text_field :recipient_email %>
+	</p>
+	
+	<%= f.submit "Invite!" %>
+	
+<% end %>

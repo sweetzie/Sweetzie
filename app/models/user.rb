@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   
   has_many :relationships
   has_many :relations, :through => :relationships  
+  
+  has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
+  belongs_to :invitation  
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
@@ -23,6 +26,7 @@ class User < ActiveRecord::Base
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
 
   before_create :make_activation_code 
+  before_create :set_invitation_limit
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
@@ -69,11 +73,17 @@ class User < ActiveRecord::Base
 
   def email=(value)
     write_attribute :email, (value ? value.downcase : nil)
-  end
-
+  end  
+  
     protected
       def make_activation_code
             self.activation_code = self.class.make_token
       end
+      
+  private
+  
+  def set_invitation_limit
+    self.invitation_limit = 5
+  end
   
 end

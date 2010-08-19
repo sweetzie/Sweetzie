@@ -87,5 +87,7 @@ header h1 a {
 .right-column {
 	
 	float: right;
+	width: 250px;
+	background: red;
 	
 }

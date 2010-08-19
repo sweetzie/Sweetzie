@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
-  map.signup '/signup', :controller => 'users', :action => 'new'
+  map.signup '/signup/:invitation_token', :controller => 'users', :action => 'new'
   
   map.settings '/settings', :controller => 'users', :action => 'edit'
   
@@ -16,6 +16,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :relationships
 
   map.resource :session
+  
+  map.resource :invitations
 
   # The priority is based upon order of creation: first created -> highest priority.
 
