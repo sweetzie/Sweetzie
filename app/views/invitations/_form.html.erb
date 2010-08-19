@@ -1,5 +1,6 @@
-<p>You have <%= current_user.invitation_limit %> invites left.
-
+<% if logged_in? %>
+	<p>You have <%= current_user.invitation_limit %> invites left.</p>
+<% end %>
 <%= error_messages_for :invitation %>
 
 <% form_for @invitation do |f| %>

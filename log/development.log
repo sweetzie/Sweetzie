@@ -23438,3 +23438,1033 @@ Rendering site/index
   [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Rendered site/_dashboard (1.7ms)
 Completed in 7ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:49:09) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (2.6ms)
+Completed in 18ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2010-08-19 17:49:10) [GET]
+  [4;36;1mInvitation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendering template within layouts/application
+Rendering invitations/new
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered invitations/_form (7.6ms)
+Completed in 54ms (View: 12, DB: 3) | 200 OK [http://localhost/invitations/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 17:49:18) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"ian@sweetzie.com"}}
+  [4;35;1mInvitation Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'ian@sweetzie.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-19 21:49:18', `invitation_limit` = 3 WHERE `id` = 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mInvitation Create (0.1ms)[0m   [0;1mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 21:49:18', 'ian@sweetzie.com', 'd413964e59a25864f8e8c22565529257ee99142d', '2010-08-19 21:49:18', NULL, 1)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+
+SyntaxError (/Users/Kyle/Sites/sweetzie/app/models/mailer.rb:3: syntax error, unexpected ',', expecting '='
+  def invitation(sent_at = Time.now, invitation, signup_url)
+                                                ^
+/Users/Kyle/Sites/sweetzie/app/models/mailer.rb:13: syntax error, unexpected kEND, expecting $end):
+  app/controllers/invitations_controller.rb:11:in `create'
+
+Rendered rescues/_trace (24.0ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 17:50:17) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"ian@sweetzie.com"}}
+  [4;36;1mInvitation Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'ian@sweetzie.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-19 21:50:17', `invitation_limit` = 2 WHERE `id` = 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mInvitation Create (0.2ms)[0m   [0mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 21:50:17', 'ian@sweetzie.com', '0b26968abe02e64069d30316de8df8dd6877102d', '2010-08-19 21:50:17', NULL, 1)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+
+NoMethodError (undefined method `singup_url' for #<InvitationsController:0x10398ce58>):
+  app/controllers/invitations_controller.rb:11:in `create'
+
+Rendered rescues/_trace (18.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 17:50:37) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"ian@sweetzie.com"}}
+  [4;35;1mInvitation Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'ian@sweetzie.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-19 21:50:38', `invitation_limit` = 1 WHERE `id` = 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mInvitation Create (0.2ms)[0m   [0;1mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 21:50:38', 'ian@sweetzie.com', 'c21b403a2671bc96f84c714994f5d1195ab35bd4', '2010-08-19 21:50:38', NULL, 1)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mInvitation Update (0.2ms)[0m   [0mUPDATE `invitations` SET `updated_at` = '2010-08-19 21:50:38', `sent_at` = '2010-08-19 21:50:38' WHERE `id` = 8[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Sent mail to ian@sweetzie.com
+
+Date: Thu, 19 Aug 2010 17:50:38 -0400
+To: ian@sweetzie.com
+Subject: You've been invited to Sweetzie
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+You are invited to join our beta!
+
+http://localhost:3000/signup/c21b403a2671bc96f84c714994f5d1195ab35bd4
+Redirected to http://localhost:3000/
+Completed in 2420ms (DB: 5) | 302 Found [http://localhost/invitations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:50:40) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.7ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2010-08-19 17:51:04) [GET]
+  [4;35;1mInvitation Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendering template within layouts/application
+Rendering invitations/new
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered invitations/_form (6.2ms)
+Completed in 12ms (View: 6, DB: 3) | 200 OK [http://localhost/invitations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:51:05) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-19 17:51:43) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user (5.3ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 2) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (4.0ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 3) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (1.9ms)
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 4) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (1.8ms)
+Completed in 21ms (View: 17, DB: 3) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-19 17:51:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRelationship Load (0.2ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 4) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 30ms (View: 25, DB: 3) | 200 OK [http://localhost/users/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:51:46) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:53:01) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:53:03) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2010-08-19 17:53:03) [GET]
+  [4;36;1mInvitation Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendering template within layouts/application
+Rendering invitations/new
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered invitations/_form (6.0ms)
+Completed in 12ms (View: 6, DB: 3) | 200 OK [http://localhost/invitations/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 17:53:12) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"kyle@skadue.com"}}
+  [4;35;1mInvitation Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'kyle@skadue.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-19 21:53:12', `invitation_limit` = 0 WHERE `id` = 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mInvitation Create (0.2ms)[0m   [0;1mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 21:53:12', 'kyle@skadue.com', 'ff202b2977e202d3db02e9f4d4db0850fc52f477', '2010-08-19 21:53:12', NULL, 1)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mInvitation Update (0.2ms)[0m   [0mUPDATE `invitations` SET `updated_at` = '2010-08-19 21:53:12', `sent_at` = '2010-08-19 21:53:12' WHERE `id` = 9[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Sent mail to kyle@skadue.com
+
+Date: Thu, 19 Aug 2010 17:53:12 -0400
+To: kyle@skadue.com
+Subject: You've been invited to Sweetzie
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+You are invited to join our beta!
+
+http://localhost:3000/signup/ff202b2977e202d3db02e9f4d4db0850fc52f477
+Redirected to http://localhost:3000/
+Completed in 1793ms (DB: 6) | 302 Found [http://localhost/invitations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:53:14) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 17:53:19) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2010-08-19 17:53:20) [GET]
+  [4;35;1mInvitation Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendering template within layouts/application
+Rendering invitations/new
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered invitations/_form (6.1ms)
+Completed in 12ms (View: 6, DB: 3) | 200 OK [http://localhost/invitations/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 17:53:21) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>""}}
+  [4;36;1mInvitation Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering invitations/new
+Rendered invitations/_form (4.5ms)
+Completed in 17ms (View: 6, DB: 3) | 200 OK [http://localhost/invitations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 17:55:15) [GET]
+  Parameters: {"invitation_token"=>"c21b403a2671bc96f84c714994f5d1195ab35bd4"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 13ms (View: 9, DB: 2) | 200 OK [http://localhost/signup/c21b403a2671bc96f84c714994f5d1195ab35bd4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:00:30) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>""}}
+  [4;36;1mInvitation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering invitations/new
+Rendered invitations/_form (4.3ms)
+Completed in 17ms (View: 6, DB: 3) | 200 OK [http://localhost/invitations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:00:41) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:01:16) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.7ms)
+Completed in 7ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-19 18:01:18) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 11ms (View: 7, DB: 2) | 200 OK [http://localhost/settings]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:01:18) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:02:10) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-19 18:02:13) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user (4.6ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 2) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (3.6ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 3) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (1.7ms)
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 4) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (1.8ms)
+Completed in 15ms (View: 11, DB: 2) | 200 OK [http://localhost/people]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:02:14) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2010-08-19 18:02:31) [GET]
+  [4;36;1mInvitation Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendering template within layouts/application
+Rendering invitations/new
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered invitations/_form (6.2ms)
+Completed in 12ms (View: 6, DB: 3) | 200 OK [http://localhost/invitations/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:06:17) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"kyle@sweetzie.com"}}
+  [4;35;1mInvitation Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'kyle@sweetzie.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering invitations/new
+Rendered invitations/_form (3.2ms)
+Completed in 16ms (View: 5, DB: 3) | 200 OK [http://localhost/invitations]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:06:41) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"ian@sweetzie.com"}}
+  [4;35;1mInvitation Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'ian@sweetzie.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-19 22:06:41', `invitation_limit` = 99998 WHERE `id` = 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mInvitation Create (0.2ms)[0m   [0;1mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 22:06:41', 'ian@sweetzie.com', '2853b693e7cd5c22c034e848eb17d84f768c5e7a', '2010-08-19 22:06:41', NULL, 1)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+
+ArgumentError (wrong number of arguments (2 for 3)):
+  app/controllers/invitations_controller.rb:11:in `create'
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:07:02) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"ian@sweetzie.com"}}
+  [4;36;1mInvitation Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'ian@sweetzie.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-19 22:07:02', `invitation_limit` = 99997 WHERE `id` = 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mInvitation Create (0.2ms)[0m   [0mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 22:07:02', 'ian@sweetzie.com', 'fd3b8d96e0d2b5a7ae7bee0d9885d57b9b944f6e', '2010-08-19 22:07:02', NULL, 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mInvitation Update (0.2ms)[0m   [0;1mUPDATE `invitations` SET `updated_at` = '2010-08-19 22:07:02', `sent_at` = '2010-08-19 22:07:02' WHERE `id` = 11[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+
+ActionView::TemplateError (undefined method `login' for nil:NilClass) on line #3 of app/views/mailer/invitation.erb:
+1: Hello There.
+2: 
+3: You've been invited to join Sweetzie by one of our users (<%= @user.login %>). 
+4: To join simply follow the url below and create an account to start sharing your favorite foods
+5: and food buying habits with your friends.
+6: 
+
+    app/views/mailer/invitation.erb:3
+    app/controllers/invitations_controller.rb:11:in `create'
+
+Rendered rescues/_trace (22.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:07:16) [POST]
+  Parameters: {"commit"=>"Invite!", "authenticity_token"=>"lBxdO0EO7YXt8LmJ9xZS/zUq9rz1A14B+p3Dkvelslw=", "invitation"=>{"recipient_email"=>"ian@sweetzie.com"}}
+  [4;36;1mInvitation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'ian@sweetzie.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-19 22:07:16', `invitation_limit` = 99996 WHERE `id` = 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mInvitation Create (0.1ms)[0m   [0mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 22:07:16', 'ian@sweetzie.com', '00a3d6a8e06a8e5cee81299fbaad446b45b52d66', '2010-08-19 22:07:16', NULL, 1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mInvitation Update (0.2ms)[0m   [0;1mUPDATE `invitations` SET `updated_at` = '2010-08-19 22:07:16', `sent_at` = '2010-08-19 22:07:16' WHERE `id` = 12[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Sent mail to ian@sweetzie.com
+
+Date: Thu, 19 Aug 2010 18:07:16 -0400
+To: ian@sweetzie.com
+Subject: You've been invited to Sweetzie
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hello There.
+
+You've been invited to join Sweetzie by one of our users (kyle). 
+To join simply follow the url below and create an account to start sharing your favorite foods
+and food buying habits with your friends.
+
+See you on the site,
+
+The Sweetzie Team
+
+http://localhost:3000/signup/00a3d6a8e06a8e5cee81299fbaad446b45b52d66
+Redirected to http://localhost:3000/
+Completed in 2064ms (DB: 5) | 302 Found [http://localhost/invitations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:07:18) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:07:21) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.7ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:08:00) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.7ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:12:41) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.7ms)
+Completed in 7ms (View: 5, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 18:12:53) [GET]
+  Parameters: {"invitation_token"=>"c21b403a2671bc96f84c714994f5d1195ab35bd4"}
+
+NameError (undefined local variable or method `invitation_token' for #<UsersController:0x103744f60>):
+  app/controllers/users_controller.rb:23:in `new'
+
+Rendered rescues/_trace (18.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 18:13:18) [GET]
+  Parameters: {"invitation_token"=>"c21b403a2671bc96f84c714994f5d1195ab35bd4"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mInvitation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mInvitation Load (0.2ms)[0m   [0;1mSELECT * FROM `invitations` WHERE (`invitations`.`token` = 'c21b403a2671bc96f84c714994f5d1195ab35bd4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://localhost/signup/c21b403a2671bc96f84c714994f5d1195ab35bd4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-19 18:13:35) [GET]
+
+ActionController::RoutingError (No route matches "/signup/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-19 18:13:37) [GET]
+
+ActionController::RoutingError (No route matches "/signup" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-19 18:13:40) [GET]
+
+ActionController::RoutingError (No route matches "/signup" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 18:13:56) [GET]
+  Parameters: {"invitation_token"=>"c21b403a2671bc96f84c714994f5d1195ab35bd4"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mInvitation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mInvitation Load (0.2ms)[0m   [0;1mSELECT * FROM `invitations` WHERE (`invitations`.`token` = 'c21b403a2671bc96f84c714994f5d1195ab35bd4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 15ms (View: 7, DB: 3) | 200 OK [http://localhost/signup/c21b403a2671bc96f84c714994f5d1195ab35bd4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:14:16) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:14:18) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered site/_dashboard (1.6ms)
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-08-19 18:14:19) [GET]
+Redirected to http://localhost:3000/login
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-19 18:14:19) [GET]
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-19 18:14:20) [GET]
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-19 18:16:09) [GET]
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-19 18:16:13) [GET]
+
+ActionController::RoutingError (No route matches "/signup/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 18:16:17) [GET]
+  Parameters: {"invitation_token"=>"1234"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mInvitation Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mInvitation Load (0.2ms)[0m   [0;1mSELECT * FROM `invitations` WHERE (`invitations`.`token` = '1234') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/signup/1234]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 18:16:18) [GET]
+  Parameters: {"invitation_token"=>"1234"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mInvitation Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mInvitation Load (0.2ms)[0m   [0mSELECT * FROM `invitations` WHERE (`invitations`.`token` = '1234') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://localhost/signup/1234]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-19 18:16:20) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"CL+54X+J7c/RUcjjXtp68KLO2Ra00+HOyticxOapqQo=", "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>"", "email"=>""}}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`invitation_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 64ms (View: 55, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-19 18:16:29) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"CL+54X+J7c/RUcjjXtp68KLO2Ra00+HOyticxOapqQo=", "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>"", "email"=>""}}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`invitation_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:18:13) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered site/_welcome (0.3ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 18:18:22) [GET]
+  Parameters: {"invitation_token"=>"c21b403a2671bc96f84c714994f5d1195ab35bd4"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mInvitation Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mInvitation Load (0.3ms)[0m   [0;1mSELECT * FROM `invitations` WHERE (`invitations`.`token` = 'c21b403a2671bc96f84c714994f5d1195ab35bd4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 52ms (View: 6, DB: 3) | 200 OK [http://localhost/signup/c21b403a2671bc96f84c714994f5d1195ab35bd4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-19 18:18:24) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"CL+54X+J7c/RUcjjXtp68KLO2Ra00+HOyticxOapqQo=", "user"=>{"password_confirmation"=>"", "password"=>"", "login"=>"", "email"=>"ian@sweetzie.com"}}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'ian@sweetzie.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`invitation_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-19 18:19:00) [GET]
+  Parameters: {"invitation_token"=>"c21b403a2671bc96f84c714994f5d1195ab35bd4"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mInvitation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mInvitation Load (0.2ms)[0m   [0mSELECT * FROM `invitations` WHERE (`invitations`.`token` = 'c21b403a2671bc96f84c714994f5d1195ab35bd4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 15ms (View: 6, DB: 3) | 200 OK [http://localhost/signup/c21b403a2671bc96f84c714994f5d1195ab35bd4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:19:04) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Rendered site/_welcome (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:20:51) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (8.6ms)
+Completed in 13ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:21:00) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mInvitation Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.6ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:21:01) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (41.9ms)
+Completed in 44ms (View: 42, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:22:15) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mInvitation Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (7.3ms)
+Completed in 12ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:22:20) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.3ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:22:38) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mInvitation Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.9ms)
+Completed in 11ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:22:43) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.5ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:22:51) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mInvitation Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (43.4ms)
+Completed in 48ms (View: 46, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-19 18:22:52) [GET]
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:22:56) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (5.9ms)
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-19 18:22:57) [GET]
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:23:09) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mInvitation Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.2ms)
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:23:10) [POST]
+  Parameters: {"commit"=>"Request Invite!", "authenticity_token"=>"CL+54X+J7c/RUcjjXtp68KLO2Ra00+HOyticxOapqQo=", "invitation"=>{"recipient_email"=>""}}
+  [4;36;1mInvitation Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = '') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering invitations/new
+
+ActionView::TemplateError (undefined method `invitation_limit' for nil:NilClass) on line #1 of app/views/invitations/_form.html.erb:
+1: <p>You have <%= current_user.invitation_limit %> invites left.
+2: 
+3: <%= error_messages_for :invitation %>
+4: 
+
+    app/views/invitations/_form.html.erb:1
+    app/views/invitations/new.html.erb:1
+    app/controllers/invitations_controller.rb:15:in `create'
+
+Rendered rescues/_trace (67.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:25:30) [POST]
+  Parameters: {"commit"=>"Request Invite!", "authenticity_token"=>"CL+54X+J7c/RUcjjXtp68KLO2Ra00+HOyticxOapqQo=", "invitation"=>{"recipient_email"=>""}}
+  [4;35;1mInvitation Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering invitations/new
+
+ActionView::TemplateError (undefined method `invitation_limit' for nil:NilClass) on line #1 of app/views/invitations/_form.html.erb:
+1: <p>You have <%= current_user.invitation_limit %> invites left.
+2: 
+3: <%= error_messages_for :invitation %>
+4: 
+
+    app/views/invitations/_form.html.erb:1
+    app/views/invitations/new.html.erb:1
+    app/controllers/invitations_controller.rb:20:in `create'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:26:14) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.3ms)
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:26:22) [POST]
+  Parameters: {"commit"=>"Request Invite!", "authenticity_token"=>"CL+54X+J7c/RUcjjXtp68KLO2Ra00+HOyticxOapqQo=", "invitation"=>{"recipient_email"=>""}}
+  [4;35;1mInvitation Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = '') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering invitations/new
+Rendered invitations/_form (4.8ms)
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/invitations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2010-08-19 18:26:46) [POST]
+  Parameters: {"commit"=>"Request Invite!", "authenticity_token"=>"CL+54X+J7c/RUcjjXtp68KLO2Ra00+HOyticxOapqQo=", "invitation"=>{"recipient_email"=>"foo@exmaple.com"}}
+  [4;36;1mInvitation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'foo@exmaple.com') LIMIT 1[0m
+  [4;36;1mInvitation Create (0.2ms)[0m   [0;1mINSERT INTO `invitations` (`created_at`, `recipient_email`, `token`, `updated_at`, `sent_at`, `sender_id`) VALUES('2010-08-19 22:26:46', 'foo@exmaple.com', '6b420b5ec99e85f57f628c90ed3962cace9dd935', '2010-08-19 22:26:46', NULL, NULL)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 11ms (DB: 4) | 302 Found [http://localhost/invitations]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-19 18:26:46) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.0ms)
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://localhost/]

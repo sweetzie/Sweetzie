@@ -1,3 +1,18 @@
-<h1>Welcome to Sweetzie</h1>
+<div class="left-column">
+	<h1>Welcome to Sweetzie</h1>
+	<p>Sweetzie is a way for you to share your favorite foods with your friends</p>
+	<h2>We're currently in a private alpha.</h2> 
+	<p>If you're interested in helping us test Sweetzie go ahead and request an invite.</p>
+</div>
 
-<p>Sweetzie is a way for you to share your favorite foods with your friends</p>
+<div class="right-column">
+	<% form_for Invitation.new do |f| %>
+		
+		<%= f.label :recipient_email, "Your Email Address" %>
+		<%= f.text_field :recipient_email %>
+		
+		<%= f.submit "Request Invite!" %>
+		
+	<% end %>
+	
+</div>
