@@ -8,8 +8,6 @@ ActionController::Routing::Routes.draw do |map|
   
   map.settings '/settings', :controller => 'users', :action => 'edit'
   
-  map.people '/people', :controller => 'users'
-  
   map.resources :users
   #map.user '/:username'
 

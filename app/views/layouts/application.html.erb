@@ -9,9 +9,9 @@
 	<body>
 		<div id="container">
 			<header>
-				<h1><%= link_to "Sweetzie", root_url %></h1>
+				<h1><a href="<%= root_url %>"><em class="ct-l">S</em>weetzie</h1>
 				<ul id="nav">
-					<li><%= link_to_unless_current "People", people_path %></li>
+					<li><%= link_to_unless_current "Users", users_path %></li>
 					<li><%= link_to "Items" %></li>
 					<% if logged_in? %>
 						<li><%= link_to "Settings", settings_path %>

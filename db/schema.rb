@@ -9,13 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100819200310) do
+ActiveRecord::Schema.define(:version => 20100820200614) do
 
   create_table "invitations", :force => true do |t|
     t.integer  "sender_id"
     t.string   "recipient_email"
     t.string   "token"
     t.datetime "sent_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "creator_id"
+    t.integer  "grab_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
