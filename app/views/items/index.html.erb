@@ -1,0 +1,9 @@
+<h1>Items</h1>
+<% if logged_in? %>
+	<%= link_to "Create a New Item", new_item_path %>
+<% end %>
+
+<%%>
+<ul>
+	<%= render :partial => @items %>
+</ul>

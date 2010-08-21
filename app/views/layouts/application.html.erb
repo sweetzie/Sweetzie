@@ -11,8 +11,8 @@
 			<header>
 				<h1><a href="<%= root_url %>"><em class="ct-l">S</em>weetzie</h1>
 				<ul id="nav">
-					<li><%= link_to_unless_current "Users", users_path %></li>
-					<li><%= link_to "Items" %></li>
+					<li><%= link_to "Users", users_path %></li>
+					<li><%= link_to "Items", items_path %></li>
 					<% if logged_in? %>
 						<li><%= link_to "Settings", settings_path %>
 						<li><%= link_to "Logout", logout_path %></li>
@@ -22,7 +22,7 @@
 			</header>
 			
 			<% if flash[:notice] %>
-				<p><%= flash[:notice] %></p>
+				<p class="notice"><%= flash[:notice] %></p>
 			<% end %>
 			<div id="content">
 				<%= yield %>

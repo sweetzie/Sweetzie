@@ -9,6 +9,8 @@ ActionController::Routing::Routes.draw do |map|
   map.settings '/settings', :controller => 'users', :action => 'edit'
   
   map.resources :users
+  map.resources :items
+
   #map.user '/:username'
 
   map.resources :relationships
