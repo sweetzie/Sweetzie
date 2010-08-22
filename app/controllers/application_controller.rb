@@ -11,10 +11,10 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
-  THE_DOMAIN = "http://sweetzie.com"
+  THE_DOMAIN = "http://sweetzie.com/"
 
   def ensure_domain
-    if RAILS_ENV['HTTP_HOST'] != THE_DOMAIN
+    if request.env['HTTP_HOST'] != THE_DOMAIN
       redirect_to THE_DOMAIN
     end
   end
