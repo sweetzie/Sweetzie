@@ -3,7 +3,7 @@
 
 class ApplicationController < ActionController::Base
   
-  before_filter :ensure_domain
+  #before_filter :ensure_domain
   
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
-  THE_DOMAIN = "http://sweetzie.com/"
+  THE_DOMAIN = "http://sweetzie.com"
 
   def ensure_domain
     if request.env['HTTP_HOST'] != THE_DOMAIN
