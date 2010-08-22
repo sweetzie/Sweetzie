@@ -19,6 +19,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
   
   map.resource :invitations
+  
+  map.resources :site
 
   # The priority is based upon order of creation: first created -> highest priority.
 
