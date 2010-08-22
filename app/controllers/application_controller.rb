@@ -3,11 +3,21 @@
 
 class ApplicationController < ActionController::Base
   
+  before_filter :ensure_domain
+  
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+
+  THE_DOMAIN = "http://sweetzie.com"
+
+  def ensure_domain
+    if RAILS_ENV['HTTP_HOST'] != THE_DOMAIN
+      redirect_to THE_DOMAIN
+    end
+  end
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
