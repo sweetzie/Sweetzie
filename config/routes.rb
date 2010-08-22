@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup/:invitation_token', :controller => 'users', :action => 'new'
+  map.signup '/signup', :controller => 'users', :action => 'new'
   
   map.settings '/settings', :controller => 'users', :action => 'edit'
   
