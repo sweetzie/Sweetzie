@@ -7,28 +7,46 @@
 	
 	<div class="activity-feed">
 		
-		<h3>Recently</h3>
+		<h2>Recently</h2>
 		
-		<ul>
-			<li>Test Feed Item</li>
-			<li>Test Feed Item</li>
-			<li>Test Feed Item</li>
-			<li>Test Feed Item</li>
-			<li>Test Feed Item</li>
-		</uL>
-		
+		<% if current_user.relationships.empty? %>
+			<p>You have no friends. Find people to follow.</p>
+		<% else %>
+			<ol>
+				<% current_user.relations.each do |person| %>
+					<li><%= link_to person.login, person %></li>
+				<% end %>
+			</ol>
+		<% end %>
 	</div>
 	
 </div>
 
 <div class="right-column">
 	<p>Welcome <%= current_user.login %></p>
+	
+	
 	<div id="send-invites">
 		
+		<h2>Invite Friends</h2>
+	
 		<p>Food is better with friends. Start sharing your favorites with yours by inviting them to join Sweetzie.</p>
 		
 		<%= link_to "Send an Invitation", :controller => 'invitations', :action => 'new' %>
 		
+	</div>
+	
+	<div id="user-items">
+		<h2>Recent Items</h2>
+		<% if current_user.items.empty? %>
+			<p>You haven't added any items yet.</p>
+		<% else %>
+			<ol>
+				<% current_user.items.each do |item| %>
+					<li><%= link_to item.name, item %></li>
+				<% end %>
+			</ol>
+		<% end %>
 	</div>
 	
 </div>

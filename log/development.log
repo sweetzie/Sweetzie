@@ -29933,3 +29933,1125 @@ Processing UsersController#create (for 127.0.0.1 at 2010-08-21 22:55:30) [POST]
 Rendering template within layouts/application
 Rendering users/new
 Completed in 45ms (View: 19, DB: 19) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 09:08:45) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 09:08:49) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 09:09:00) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-08-23 09:09:07) [GET]
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendered items/_item (3.1ms)
+Rendered items/_item (0.0ms)
+Completed in 12ms (View: 8, DB: 2) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-23 09:09:08) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered users/_user (4.7ms)
+Rendered users/_user (0.3ms)
+Rendered users/_user (0.3ms)
+Rendered users/_user (0.3ms)
+Completed in 50ms (View: 46, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-08-23 09:09:10) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendered items/_item (2.3ms)
+Rendered items/_item (0.0ms)
+Completed in 7ms (View: 3, DB: 2) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-23 09:09:11) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered users/_user (3.6ms)
+Rendered users/_user (0.3ms)
+Rendered users/_user (0.3ms)
+Rendered users/_user (0.2ms)
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 09:09:12) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 09:09:45) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100817194304)
+Migrating to CreateRelationships (20100817230508)
+Migrating to CreateInvitations (20100819200226)
+Migrating to AddInvitationToUsers (20100819200310)
+Migrating to CreateItems (20100820200614)
+Migrating to CreateGrabs (20100823191110)
+  [4;36;1mSQL (127.1ms)[0m   [0;1mCREATE TABLE `grabs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `item_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100823191110')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.7ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `grabs`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `grabs`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `invitations`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `invitations`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `items`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `items`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `relationships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `relationships`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (1.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`name` = 'Test') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`name` = 'Test Item 1') LIMIT 1[0m
+  [4;35;1mGrab Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGrab Create (0.0ms)[0m   [0mMysql::Error: Column 'user_id' cannot be null: INSERT INTO `grabs` (`created_at`, `updated_at`, `user_id`, `item_id`) VALUES('2010-08-23 19:34:45', '2010-08-23 19:34:45', NULL, 1)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGrab Create (0.3ms)[0m   [0;1mINSERT INTO `grabs` (`created_at`, `updated_at`, `user_id`, `item_id`) VALUES('2010-08-23 19:34:45', '2010-08-23 19:34:45', 1, 1)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:36:26) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-08-23 15:36:30) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendered items/_item (3.0ms)
+Rendered items/_item (0.0ms)
+Completed in 14ms (View: 9, DB: 2) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-23 15:36:34) [GET]
+
+ActionController::RoutingError (No route matches "/grabs" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GrabsController#index (for 127.0.0.1 at 2010-08-23 15:37:12) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ensure_domain):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GrabsController#index (for 127.0.0.1 at 2010-08-23 15:37:36) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GrabsController#index (for 127.0.0.1 at 2010-08-23 15:37:37) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GrabsController#index (for 127.0.0.1 at 2010-08-23 15:37:37) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'kyle') LIMIT 1[0m
+  [4;36;1mGrab Load (0.3ms)[0m   [0;1mSELECT * FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+  [4;35;1mGrab Columns (22.4ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:41:51) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:42:40) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mInvitation Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (8.1ms)
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:42:42) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mInvitation Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `invitations`[0m
+Rendered site/_welcome (6.7ms)
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-23 15:42:43) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-08-23 15:42:47) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"x2qe4pk9US3dEav+HO/XuCB9gYp6xjdDcWue4iSfrM8=", "login"=>"kyle", "password"=>"nov71990"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'kyle' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 7ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:42:47) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (7.1ms)
+Completed in 17ms (View: 12, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:43:05) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+ERROR: compiling _run_erb_app47views47site47_dashboard46html46erb_locals_dashboard_object RAISED compile error
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:36: syntax error, unexpected '!'
+;  if current_user.grabs.!empty? ; @output_buffer.concat...
+                          ^
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:43: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47site47_dashboard46html46erb_locals_dashboard_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];dashboard = local_assigns[:dashboard];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"left-column\">\n\t<h1>Dashboard</h1>\n\t\n\t<div id=\"create-item\">\n\t\t\n\t</div>\n\t\n\t<div class=\"activity-feed\">\n\t\t\n\t\t<h3>Recently</h3>\n\t\t\n\t\t<ul>\n\t\t\t<li>Test Feed Item</li>\n\t\t\t<li>Test Feed Item</li>\n\t\t\t<li>Test Feed Item</li>\n\t\t\t<li>Test Feed Item</li>\n\t\t\t<li>Test Feed Item</li>\n\t\t</uL>\n\t\t\n\t</div>\n\t\n</div>\n\n<div class=\"right-column\">\n\t<p>Welcome "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( current_user.login ).to_s); @output_buffer.concat "</p>\n\t<div id=\"send-invites\">\n\t\t\n\t\t<p>Food is better with friends. Start sharing your favorites with yours by inviting them to join Sweetzie.</p>\n\t\t\n\t\t"
+
+
+
+
+; @output_buffer.concat(( link_to "Send an Invitation", :controller => 'invitations', :action => 'new' ).to_s); @output_buffer.concat "\n\t\t\n\t</div>\n\t\n\t<div id=\"user-items\">\n\t\t\n\t\t"
+
+
+
+
+
+;  if current_user.grabs.!empty? ; @output_buffer.concat "\n\t\t\t<p>The user has no items</p>\n\t\t"
+
+;  else ; @output_buffer.concat "\n\t\t\t<p>The user has items</p>\n\t\t"
+
+;  end ; @output_buffer.concat "\n\t\n</div>"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:43:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+/Users/Kyle/Sites/sweetzie/app/views/site/index.html.erb:2:in `_run_erb_app47views47site47index46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:36: syntax error, unexpected '!'
+;  if current_user.grabs.!empty? ; @output_buffer.concat...
+                          ^
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:43: syntax error, unexpected kENSURE, expecting $end) on line #36 of app/views/site/_dashboard.html.erb:
+33: 	
+34: 	<div id="user-items">
+35: 		
+36: 		<% if current_user.grabs.!empty? %>
+37: 			<p>The user has no items</p>
+38: 		<% else %>
+39: 			<p>The user has items</p>
+
+    app/views/site/_dashboard.html.erb:43:in `compile!'
+    app/views/site/index.html.erb:2
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-23 15:43:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-23 15:43:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:43:57) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (7.8ms)
+Completed in 17ms (View: 12, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:45:41) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (42.2ms)
+Completed in 50ms (View: 46, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:45:51) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (7.0ms)
+Completed in 14ms (View: 9, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:45:51) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (5.3ms)
+Completed in 11ms (View: 7, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:45:52) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (5.6ms)
+Completed in 11ms (View: 7, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:46:44) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (6.9ms)
+Completed in 14ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:46:44) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (5.9ms)
+Completed in 11ms (View: 8, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:46:44) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (6.2ms)
+Completed in 14ms (View: 8, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:46:55) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (6.6ms)
+Completed in 15ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:46:55) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (51.0ms)
+Completed in 57ms (View: 52, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:46:56) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (314.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mGrab Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+Rendered site/_dashboard (9.2ms)
+Completed in 329ms (View: 9, DB: 319) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'kyle') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'kyle') LIMIT 1[0m
+  [4;35;1mGrab Load (0.3ms)[0m   [0mSELECT * FROM `grabs` WHERE (`grabs`.user_id = 1) [0m
+  [4;36;1mGrab Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `grabs`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:49:57) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (49.5ms)
+Completed in 67ms (View: 63, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:51:17) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (20.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (10.7ms)
+Completed in 39ms (View: 16, DB: 22) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:52:36) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (53.0ms)
+Completed in 61ms (View: 57, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:52:37) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (12.2ms)
+Completed in 20ms (View: 14, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:52:37) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (52.5ms)
+Completed in 58ms (View: 54, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:53:09) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (12.8ms)
+Completed in 20ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:53:10) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (55.3ms)
+Completed in 61ms (View: 57, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:54:54) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (10.4ms)
+Completed in 18ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:55:44) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+ERROR: compiling _run_erb_app47views47site47_dashboard46html46erb_locals_dashboard_object RAISED compile error
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:46: syntax error, unexpected kENSURE, expecting kEND
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:48: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47site47_dashboard46html46erb_locals_dashboard_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];dashboard = local_assigns[:dashboard];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"left-column\">\n\t<h1>Dashboard</h1>\n\t\n\t<div id=\"create-item\">\n\t\t\n\t</div>\n\t\n\t<div class=\"activity-feed\">\n\t\t\n\t\t<h2>Recently</h2>\n\t\t\n\t\t"
+
+
+
+
+
+
+
+
+
+
+;  if current_user.relations; @output_buffer.concat "\n\t\t\n\t</div>\n\t\n</div>\n\n<div class=\"right-column\">\n\t<p>Welcome "
+
+
+
+
+
+
+; @output_buffer.concat(( current_user.login ).to_s); @output_buffer.concat "</p>\n\t\n\t\n\t<div id=\"send-invites\">\n\t\t\n\t\t<h2>Invite Friends</h2>\n\t\n\t\t<p>Food is better with friends. Start sharing your favorites with yours by inviting them to join Sweetzie.</p>\n\t\t\n\t\t"
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to "Send an Invitation", :controller => 'invitations', :action => 'new' ).to_s); @output_buffer.concat "\n\t\t\n\t</div>\n\t\n\t<div id=\"user-items\">\n\t\t<h2>Recent Items</h2>\n\t\t"
+
+
+
+
+
+;  if current_user.items.empty? ; @output_buffer.concat "\n\t\t\t<p>You haven't added any items yet.</p>\n\t\t"
+
+;  else ; @output_buffer.concat "\n\t\t\t<ol>\n\t\t\t\t"
+
+;  current_user.items.each do |item| ; @output_buffer.concat "\n\t\t\t\t\t<li>"
+; @output_buffer.concat(( item.name ).to_s); @output_buffer.concat "</li>\n\t\t\t\t"
+;  end ; @output_buffer.concat "\n\t\t\t</ol>\n\t\t"
+
+;  end ; @output_buffer.concat "\n\t</div>\n\t\n</div>"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:48:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+/Users/Kyle/Sites/sweetzie/app/views/site/index.html.erb:2:in `_run_erb_app47views47site47index46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:46: syntax error, unexpected kENSURE, expecting kEND
+/Users/Kyle/Sites/sweetzie/app/views/site/_dashboard.html.erb:48: syntax error, unexpected $end, expecting kEND) on line #46 of app/views/site/_dashboard.html.erb:
+43: 	</div>
+44: 	
+45: </div>
+
+    app/views/site/_dashboard.html.erb:48:in `compile!'
+    app/views/site/index.html.erb:2
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:56:36) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (25.7ms)
+Completed in 34ms (View: 29, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:56:46) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mRelationship Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (17.6ms)
+Completed in 25ms (View: 19, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:56:47) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (57.3ms)
+Completed in 63ms (View: 58, DB: 5) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:56:47) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (232.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mRelationship Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;35;1mItem Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (11.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (64.6ms)
+Completed in 302ms (View: 17, DB: 284) | 200 OK [http://localhost/]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;36;1mRelationship Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRelationship Create (0.2ms)[0m   [0;1mINSERT INTO `relationships` (`created_at`, `updated_at`, `user_id`, `relation_id`) VALUES('2010-08-23 19:59:08', '2010-08-23 19:59:08', 1, 2)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 15:59:18) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mItem Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;36;1mItem Load (0.1ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (57.8ms)
+Completed in 66ms (View: 59, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 16:02:24) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;35;1mUser Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mRelationship Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;35;1mRelationship Load (0.1ms)[0m   [0mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+
+ActionView::TemplateError (undefined method `login' for #<Relationship:0x1036f44e8>) on line #17 of app/views/site/_dashboard.html.erb:
+14: 		<% else %>
+15: 			<ol>
+16: 				<% current_user.relationships.each do |person| %>
+17: 					<li><%= person.login %></li>
+18: 				<% end %>
+19: 			</ol>
+20: 		<% end %>
+
+    app/views/site/_dashboard.html.erb:17
+    app/views/site/_dashboard.html.erb:16
+    app/views/site/index.html.erb:2
+
+Rendered rescues/_trace (75.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mRelationship Load (0.3ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 16:02:56) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (18.2ms)
+Completed in 26ms (View: 19, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 16:03:35) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (18.6ms)
+Completed in 26ms (View: 19, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:03:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRelationship Load (0.3ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 2) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 43ms (View: 37, DB: 2) | 200 OK [http://localhost/users/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 16:03:55) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;35;1mItem Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (17.8ms)
+Completed in 66ms (View: 59, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2010-08-23 16:03:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = '1') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template items/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mGrab Load (0.2ms)[0m   [0;1mSELECT * FROM `grabs` [0m
+  [4;35;1mGrab Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `grabs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 16:08:08) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (52.8ms)
+Completed in 60ms (View: 54, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:08:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRelationship Load (0.2ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 2) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 9ms (View: 5, DB: 2) | 200 OK [http://localhost/users/2]

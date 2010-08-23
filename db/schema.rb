@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100820200614) do
+ActiveRecord::Schema.define(:version => 20100823191110) do
+
+  create_table "grabs", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.integer  "item_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "invitations", :force => true do |t|
     t.integer  "sender_id"

@@ -1,1 +1,5 @@
-<p>Test of homepage on heroku.</p>
+<% if logged_in? %>
+	<%= render :partial => 'dashboard' %>
+<% else %>
+	<%= render :partial => 'welcome' %>
+<% end %>
