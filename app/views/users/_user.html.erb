@@ -2,7 +2,6 @@
 <div class="user-details">
 	<div class="user-info">
 		<h3><%= user.name %> (@<%= link_to "#{user.login}", user %>)</h3>
-		<p><%= user.email %></p>
 	</div>
 	
 	<div class="user-counts">
@@ -13,7 +12,7 @@
 
 		<a href="#">
 			<h4>Following</h4>
-			<p><%= user.relations.count %></p>
+			<p><%= '0' %></p>
 		</a>
 
 		<a href="#">
@@ -23,15 +22,5 @@
 	</div>
 </div>
 
-<div class="user-action-buttons">
-		<% if logged_in? %>	
-			<% if current_user.id == user.id %>
-				<p><%= "That's you!" %></p>
-			<% elsif current_user.relations.include?(user) %>
-				<p><%= "Following" %></p>
-			<% else %>
-				<%= link_to "Follow", relationships_path(:relation_id => user), :method => :post %>
-			<% end %>
-		<% end %>
-</div>
+<div class="user-action-buttons"></div>
 </li>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100823191110) do
+ActiveRecord::Schema.define(:version => 20100823221540) do
 
   create_table "grabs", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(:version => 20100823191110) do
     t.datetime "activated_at"
     t.integer  "invitation_id"
     t.integer  "invitation_limit"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
