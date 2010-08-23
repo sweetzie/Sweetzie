@@ -162,5 +162,44 @@ input[type=submit] {
 	border: 1px solid #f9e889;
 	padding: 5px;
 	text-shadow: none;
+	
+}
+
+.user-details {
+	clear: both;
+	overflow: hidden;
+	padding: 10px 0px;
+	width: 535px;
+}
+
+.user-info {
+	
+	float: left;
+	padding-top: 5px;
+	
+}
+
+.user-counts {
+	
+	float: right;
+	background: #ccc;
+	border: 1px solid #3c3c3c;
+	border-radius: 5px;
+	
+}
+
+.user-counts a {
+	
+	float: left;
+	padding: 10px;
+	overflow: hidden;
+	text-align: center;
+	
+}
+
+.user-action-buttons {
+	
+	float: right;
+	
 }
 

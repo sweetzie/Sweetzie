@@ -1,13 +1,37 @@
 <li>
-	<h3><%= user.name %> (@<%= link_to "#{user.login}", user %>)</h3>
-	<p><%= user.email %></p>
-	<% if logged_in? %>	
-		<% if current_user.id == user.id %>
-			<p><%= "That's you!" %></p>
-		<% elsif current_user.relations.include?(user) %>
-			<p><%= "Following" %></p>
-		<% else %>
-			<%= link_to "Follow", relationships_path(:relation_id => user), :method => :post %>
+<div class="user-details">
+	<div class="user-info">
+		<h3><%= user.name %> (@<%= link_to "#{user.login}", user %>)</h3>
+		<p><%= user.email %></p>
+	</div>
+	
+	<div class="user-counts">
+		<a href="#">
+			<h4>Grabs</h4>
+			<p><%= user.items.count %></p>
+		</a>
+
+		<a href="#">
+			<h4>Following</h4>
+			<p><%= user.relations.count %></p>
+		</a>
+
+		<a href="#">
+			<h4>Followers</h4>
+			<p><%= '0' %></p>
+		</a>
+	</div>
+</div>
+
+<div class="user-action-buttons">
+		<% if logged_in? %>	
+			<% if current_user.id == user.id %>
+				<p><%= "That's you!" %></p>
+			<% elsif current_user.relations.include?(user) %>
+				<p><%= "Following" %></p>
+			<% else %>
+				<%= link_to "Follow", relationships_path(:relation_id => user), :method => :post %>
+			<% end %>
 		<% end %>
-	<% end %>
+</div>
 </li>

@@ -1,0 +1,9 @@
+<h1><%= @item.name %></h1>
+
+<p><%= @item.description %></p>
+
+<h2>Users who have grabbed this item</h2>
+
+<% @item.users.each do |user| %>
+	<p><%= link_to user.name, user %></p>
+<% end %>

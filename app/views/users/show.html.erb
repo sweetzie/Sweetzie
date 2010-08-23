@@ -6,8 +6,10 @@
 <% for relationship in @user.relationships %>
 	<li>
 		<%=h link_to "#{relationship.relation.name}", relationship.relation %> (@<%= relationship.relation.login %>)
-		<% if current_user.id == @user.id %>
-			<%= link_to "remove", relationship, :method => :delete %>
+		<% if logged_in? %>
+			<% if current_user.id == @user.id %>
+				<%= link_to "remove", relationship, :method => :delete %>
+			<% end %>
 		<% end %>
 	</li>
 <% end %>
