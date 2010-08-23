@@ -12,3 +12,11 @@
 	</li>
 <% end %>
 </ul>
+
+<h2><%= @user.name%>'s Items</h2>
+
+<ol>
+	<% @items.each do |item| %>
+		<li><%= link_to item.name, item %></li>
+	<% end %>
+</ol>

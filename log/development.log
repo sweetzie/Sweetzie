@@ -31055,3 +31055,363 @@ Rendering users/show
   [4;36;1mRelationship Load (0.2ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 2) [0m
   [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Completed in 9ms (View: 5, DB: 2) | 200 OK [http://localhost/users/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:08:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRelationship Load (0.2ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 2) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 9ms (View: 5, DB: 2) | 200 OK [http://localhost/users/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-23 16:08:57) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 23ms (View: 18, DB: 2) | 200 OK [http://localhost/settings]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 16:08:59) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (14.6ms)
+Completed in 20ms (View: 14, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2010-08-23 16:09:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = '1') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template items/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-08-23 16:09:15) [GET]
+Rendering template within layouts/application
+Rendering site/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mRelationship Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `relationships`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.* FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE ((`relationships`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Load (0.1ms)[0m   [0mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+Rendered site/_dashboard (15.4ms)
+Completed in 23ms (View: 17, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-23 16:11:27) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user (5.8ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 2) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (3.0ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 3) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (2.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 4) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (2.4ms)
+Completed in 65ms (View: 61, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:11:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (17.8ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `items' for #<Class:0x1037cc168>):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered rescues/_trace (19.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:11:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `items' for #<Class:0x1035123c8>):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered rescues/_trace (19.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:14:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (9.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `items' for #<Class:0x1036d5728>):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered rescues/_trace (19.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:14:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `items' for #<Class:0x10343d3f8>):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered rescues/_trace (20.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:14:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+
+NoMethodError (undefined method `items' for #<Class:0x103619050>):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered rescues/_trace (20.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:14:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `grabs' for #<Class:0x1038cf470>):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered rescues/_trace (19.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-08-23 16:15:07) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/Kyle/Sites/sweetzie/app/controllers/users_controller.rb:56: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:15:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRelationship Load (0.2ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;35;1mRelationship Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 23ms (View: 15, DB: 4) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:16:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (18.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRelationship Load (0.3ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;35;1mRelationship Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 87ms (View: 60, DB: 22) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2010-08-23 16:16:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = '1') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template items/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-23 16:16:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRelationship Load (0.2ms)[0m   [0;1mSELECT * FROM `relationships` WHERE (`relationships`.user_id = 1) [0m
+  [4;35;1mRelationship Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT `items`.* FROM `items` INNER JOIN `grabs` ON `items`.id = `grabs`.item_id WHERE ((`grabs`.user_id = 1)) [0m
+  [4;35;1mItem Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 63ms (View: 54, DB: 5) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2010-08-23 16:17:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = '1') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template items/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2010-08-23 16:17:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = '1') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template items/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-23 16:17:35) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 83ms (View: 79, DB: 2) | 200 OK [http://localhost/settings]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-08-23 16:17:36) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mItem Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendered items/_item (2.4ms)
+Rendered items/_item (0.0ms)
+Completed in 15ms (View: 9, DB: 3) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2010-08-23 16:17:41) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/application
+Rendering items/new
+Completed in 27ms (View: 19, DB: 3) | 200 OK [http://localhost/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2010-08-23 16:17:57) [GET]
+  [4;35;1mItem Load (1.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/application
+Rendering items/index
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mItem Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendered items/_item (2.1ms)
+Rendered items/_item (0.1ms)
+Completed in 60ms (View: 5, DB: 4) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-23 16:17:57) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered users/_user (6.0ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 2) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (3.0ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 3) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (1.9ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` INNER JOIN `relationships` ON `users`.id = `relationships`.relation_id WHERE (`users`.`id` = 4) AND ((`relationships`.user_id = 1)) LIMIT 1[0m
+Rendered users/_user (2.1ms)
+Completed in 17ms (View: 12, DB: 4) | 200 OK [http://localhost/users]
