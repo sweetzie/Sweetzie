@@ -1,18 +1,22 @@
 class RelationshipsController < ApplicationController
+  
+  before_filter :login_required
+  before_filter :get_followed_user
+  
   def create
-    @relationship = current_user.relationships.build(:relation_id => params[:relation_id])
-    if @relationship.save
-      flash[:notice] = "Started Following"
-      redirect_to users_url
-    else
-      render :action => 'new'
-    end
+    current_user.follow!(@user)
+    redirect_to @user
   end
 
   def destroy
-    @friendship = current_user.relationships.find(params[:id])
-    @friendship.destroy
-    flash[:notice] = "Successfully destroyed relationship."
-    redirect_to users_url
+    current_user.unfollow!(@user)
+    redirect_to @user
   end
+  
+  private
+  
+    def get_followed_user
+      @user = User.find(params[:relationship][:followed_id])
+    end
+
 end

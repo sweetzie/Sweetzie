@@ -10,6 +10,8 @@ ActionController::Routing::Routes.draw do |map|
     
   map.settings '/settings', :controller => 'users', :action => 'edit'
   
+  map.resources :relationships, :only => [:create, :destroy]
+  
   map.resources :items
   map.resource :session  
   map.resources :site

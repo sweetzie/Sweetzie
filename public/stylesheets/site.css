@@ -94,14 +94,14 @@ header h1 a {
 .left-column {
 	
 	float:left;
-	width: 530px;
+	width: 70%;
 	
 }
 
 .right-column {
 	
 	float: right;
-	width: 250px;
+	width: 30%;
 	
 }
 label {
@@ -166,16 +166,15 @@ input[type=submit] {
 }
 
 .user-details {
-	clear: both;
-	overflow: hidden;
 	padding: 10px 0px;
 	width: 535px;
+	float: left;
 }
 
 .user-info {
 	
 	float: left;
-	padding-top: 5px;
+	padding-top: 12px;
 	
 }
 
@@ -200,6 +199,31 @@ input[type=submit] {
 .user-action-buttons {
 	
 	float: right;
+	margin-right: 20px;
+	margin-top: 30px;
+	
+}
+
+#user-following-list {
+	
+	margin-top: 20px;
+	
+	
+}
+
+#user-following-list ul {
+	
+	background: #ccc;
+	padding: 10px;
+	overflow: hidden;
+	margin-top: 5px;
+	border-radius: 5px;
+}
+
+#user-following-list li {
+	
+	display: inline;
+	width: ;
 	
 }
 

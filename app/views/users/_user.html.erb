@@ -1,7 +1,6 @@
-<li>
 <div class="user-details">
 	<div class="user-info">
-		<h3><%= user.name %> (@<%= link_to "#{user.login}", user %>)</h3>
+		<h3><%= link_to "#{user.name} (@#{user.login})", user %></h3>
 	</div>
 	
 	<div class="user-counts">
@@ -10,17 +9,26 @@
 			<p><%= user.items.count %></p>
 		</a>
 
-		<a href="#">
+		<a href="<%= following_user_path(user) %>">
 			<h4>Following</h4>
-			<p><%= '0' %></p>
+			<p><%= user.following.count %></p>
 		</a>
 
-		<a href="#">
+		<a href="<%= followers_user_path(user) %>">
 			<h4>Followers</h4>
-			<p><%= '0' %></p>
+			<p><%= user.followers.count %></p>
 		</a>
 	</div>
 </div>
 
-<div class="user-action-buttons"></div>
-</li>
+<div class="user-action-buttons">	
+	
+	<% if current_user.following?(user) %>
+		<p>Following</p>
+	<% elsif user.id == current_user.id %>
+		<p>That's You</p>
+	<% else %>
+		<%= link_to "Follow" %>
+	<% end %>
+	
+</div>

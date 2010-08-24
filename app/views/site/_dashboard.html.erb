@@ -16,17 +16,16 @@
 <div class="right-column">
 	<p>Welcome <%= current_user.first_name %></p>
 	
-	<div id="user-items">
-		<h2>Recent Items</h2>
-		<% if current_user.items.empty? %>
-			<p>You haven't added any items yet.</p>
-		<% else %>
-			<ol>
-				<% current_user.items.each do |item| %>
-					<li><%= link_to item.name, item %></li>
-				<% end %>
-			</ol>
+	<div id="user-following-list">
+		
+		<h3>Following</h3>
+		<ul>
+		<% current_user.following.each do |p| %>
+			<li>
+				<%= link_to "#{p.first_name }", user_path(p) %></a>
+			</li>
 		<% end %>
+		</ul>
 	</div>
 		
 </div>

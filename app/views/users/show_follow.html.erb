@@ -1,0 +1,10 @@
+<h1><%= @user.name %></h1>
+
+<h2><%= @title %></h2>
+<% unless @users.empty? %>
+	<ul>
+		<%= render @users %>
+	</ul>
+<% end %>
+	
+	

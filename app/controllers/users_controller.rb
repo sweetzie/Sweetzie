@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  before_filter :login_required, :only => [:edit]
+  before_filter :login_required, :except => [:show, :new, :create, :index]
   
   def index
     @users = User.all
@@ -54,4 +54,19 @@ class UsersController < ApplicationController
       redirect_back_or_default('/')
     end
   end
+  
+  def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
+  end
+  
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follow'
+  end
+  
 end
