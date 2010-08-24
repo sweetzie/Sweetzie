@@ -2,26 +2,32 @@ require 'digest/sha1'
 
 class User < ActiveRecord::Base
 
+  # Includes
+
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
   
-  has_many :relationships
-  has_many :relations, :through => :relationships  
+  # Associations
   
   has_many :grabs
   has_many :items, :through => :grabs
   
-  has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
-  belongs_to :invitation
+  has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
+  has_many :following, :through => :relationships, :source => :followed
+  
+  has_many :reverse_relationships, :foreign_key => "followed_id", :class_name => "Relationship", :dependent => :destroy
+  has_many :followers, :through => :reverse_relationships, :source => :follower
+  
+  # Validations
   
   validates_presence_of     :first_name
-   validates_length_of       :first_name,    :within => 3..20
-   validates_format_of       :first_name, :with => Authentication.name_regex, :message => Authentication.bad_name_message
+  validates_length_of       :first_name,    :within => 3..20
+  validates_format_of       :first_name, :with => Authentication.name_regex, :message => Authentication.bad_name_message
    
-   validates_presence_of     :last_name
-   validates_length_of       :last_name,    :within => 3..20
-   validates_format_of       :last_name, :with => Authentication.name_regex, :message => Authentication.bad_name_message
+  validates_presence_of     :last_name
+  validates_length_of       :last_name,    :within => 3..20
+  validates_format_of       :last_name, :with => Authentication.name_regex, :message => Authentication.bad_name_message
       
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
@@ -40,21 +46,28 @@ class User < ActiveRecord::Base
   #validates_uniqueness_of :invitation_id
 
   before_create :make_activation_code 
-  before_create :set_invitation_limit
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :name, :password, :password_confirmation, :first_name, :last_name
-
-  def invitation_token
-    invitation.token if invitation
+  
+  
+  # Checks to see if the specified user is already being followed
+  def following?(followed)
+    relationships.find_by_followed_id(followed)
   end
   
-  def invitation_token=(token)
-    self.invitation = Invitation.find_by_token(token)
+  # Create a following relationship with the specified user
+  def follow!(followed)
+    relationships.create!(:followed_id => followed.id)
   end
-
+  
+  # Destroy a following relationship
+  def unfollow!(followed)
+    relationships.find_by_followed_id(followed).destroy
+  end  
+  
   # Activates the user in the database.
   def activate!
     @activated = true
@@ -101,11 +114,5 @@ class User < ActiveRecord::Base
       def make_activation_code
             self.activation_code = self.class.make_token
       end
-      
-  private
-  
-  def set_invitation_limit
-    self.invitation_limit = 5
-  end
   
 end

@@ -1,9 +1,21 @@
-<h1><%= @item.name %></h1>
+<div class="left-column">
+	<h1><%= @item.name %></h1>
 
-<p><%= @item.description %></p>
+	<p><%= @item.description %></p>
 
-<h2>Users who have grabbed this item</h2>
+</div>
 
-<% @item.users.each do |user| %>
-	<p><%= link_to user.name, user %></p>
-<% end %>
+<div class="right-column">
+	
+	<h2>Grabbers</h2>
+	
+	<% if @item.users.empty? %>
+		<p>No one has grabbed this item yet!</p>
+		<em>You could be the first.</em>
+	<% else %>
+		<% @item.users.each do |user| %>
+			<p><%= link_to user.name, user %></p>
+		<% end %>
+	<% end %>
+	
+</div>

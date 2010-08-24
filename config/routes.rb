@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
+  map.resources :users, :member => { :following => :get, :followers => :get }
+  
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
@@ -8,7 +10,6 @@ ActionController::Routing::Routes.draw do |map|
     
   map.settings '/settings', :controller => 'users', :action => 'edit'
   
-  map.resources :users
   map.resources :items
   map.resource :session  
   map.resources :site
