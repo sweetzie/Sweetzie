@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # Associations
   
   has_many :grabs, :dependent => :destroy
-  has_many :items, :through => :grabs, :source => :item
+  has_many :items, :through => :grabs
   
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed

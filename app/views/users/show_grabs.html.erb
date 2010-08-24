@@ -1,0 +1,9 @@
+<h1><%= @title %></h1>
+
+<ol>
+<% @grabs.each do |grab| %>
+	<li>
+		<h3><%=  link_to grab.item.name, grab.item %></h3>
+		<p><%= grab.created_at %></p>
+	</li>
+<% end %>

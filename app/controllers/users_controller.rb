@@ -69,4 +69,11 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
   
+  def grabs
+    @title = "Grabs"
+    @user = User.find_by_login(params[:id])
+    @grabs = @user.grabs
+    render 'show_grabs'
+  end
+  
 end
