@@ -23,18 +23,21 @@ ul { list-style-type: none;}
 
 #container {
 	
-	width: 800px;
+	width: 900px;
 	margin: 0 auto;
-
 }
 
 #content {
 	
+	clear: both;
 	background: #ffffff;
 	margin-top: 10px;
 	padding: 10px;
 	-webkit-box-shadow: #cccccc 0px 0px 2px;
-	overflow: hidden;	
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	
 }
 
 
@@ -50,10 +53,12 @@ h6 { font-size: .5em; }
 
 header {
 	
-	overflow: hidden;
 	margin-top: 10px;
-	padding: 0px 10px;
 	margin-bottom: 10px;
+	float: left;
+	width: 100%;
+	position: relative;
+	z-index: 2;
 }
 
 header h1 {
@@ -63,6 +68,7 @@ header h1 {
 	font-family: "Georgia", "Times New Roman", "Times", serif;
 	font-style: italic;
 	font-weight: bold;
+	margin-left: 10px;
 	
 }
 
@@ -72,24 +78,86 @@ header h1 a {
 	
 }
 
-#nav {
+header ul {
 	
 	float: right;
-	list-style-type: none;
-	margin-top: 15px;
+	padding: 0;
+	margin: 0;
+	padding-top: 10px;
+	margin-right: 10px;
 }
 
-#nav li {
+header ul li {
 	
-	display: inline;
-	margin-left: 30px;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	width: 100px;
+	padding-top: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	
 }
 
-#nav li a {
+header ul li a {
+	
+	text-decoration: none;
+	margin-left: 10px;
 	
 }
 
+header li ul {
+	
+	display: none;
+	position: absolute;
+	top: 1.3em;
+	left: 0;
+	z-index: 200;
+	
+}
+
+header li:hover {
+	
+	background: #3c3c3c;
+	color: #ffffff;
+	text-shadow: none;
+
+}
+
+header li:hover a {
+	
+	color: #ffffff;
+	text-decoration: underline;
+	
+}
+
+header li:hover ul {
+	
+	display: block;
+	background: #3c3c3c;
+	width: 100px;
+	padding-bottom: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+header li:hover ul li {
+	
+	margin: 0;
+	padding: 0px;
+	float: none;
+	text-align: left;
+	background: none;
+	
+	
+}
+
+header li:hover ul li a {
+	
+	color: #ffffff;
+	text-shadow: none;
+	
+}
 
 .left-column {
 	
@@ -162,6 +230,7 @@ input[type=submit] {
 	border: 1px solid #f9e889;
 	padding: 5px;
 	text-shadow: none;
+	clear: both;
 	
 }
 
