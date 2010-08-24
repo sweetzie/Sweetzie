@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
   
   # Associations
   
-  has_many :grabs
-  has_many :items, :through => :grabs
+  has_many :grabs, :dependent => :destroy
+  has_many :items, :through => :grabs, :source => :item
   
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed
@@ -58,6 +58,7 @@ class User < ActiveRecord::Base
     login
   end
   
+  ##------------------ Reltionships ------------------##
   
   # Checks to see if the specified user is already being followed
   def following?(followed)
@@ -73,6 +74,16 @@ class User < ActiveRecord::Base
   def unfollow!(followed)
     relationships.find_by_followed_id(followed).destroy
   end  
+  
+  ##------------------ Grabs ------------------##
+  
+  # Grab a new item
+  
+  def grab!(item)
+    grabs.create!(:item_id => item.id)
+  end
+  
+  ##------------------ Authentication and Registration ------------------##
   
   # Activates the user in the database.
   def activate!

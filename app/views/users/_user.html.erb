@@ -4,7 +4,7 @@
 	</div>
 	
 	<div class="user-counts">
-		<a href="#">
+		<a href="<%= grabs_user_path(user) %>">
 			<h4>Grabs</h4>
 			<p><%= user.items.count %></p>
 		</a>
@@ -22,7 +22,7 @@
 </div>
 
 <div class="user-action-buttons">	
-	
+<% if logged_in? %>
 	<% if current_user.following?(user) %>
 		<p>Following</p>
 	<% elsif user.id == current_user.id %>
@@ -30,5 +30,5 @@
 	<% else %>
 		<%= link_to "Follow" %>
 	<% end %>
-	
+<% end %>
 </div>
