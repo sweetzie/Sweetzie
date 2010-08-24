@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_login(params[:id])
     @items = @user.items
   end
   
@@ -57,14 +57,14 @@ class UsersController < ApplicationController
   
   def following
     @title = "Following"
-    @user = User.find(params[:id])
+    @user = User.find_by_login(params[:id])
     @users = @user.following
     render 'show_follow'
   end
   
   def followers
     @title = "Followers"
-    @user = User.find(params[:id])
+    @user = User.find_by_login(params[:id])
     @users = @user.followers
     render 'show_follow'
   end

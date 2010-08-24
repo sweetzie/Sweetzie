@@ -52,6 +52,12 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :name, :password, :password_confirmation, :first_name, :last_name
   
+  # change style of urls
+  
+  def to_param
+    login
+  end
+  
   
   # Checks to see if the specified user is already being followed
   def following?(followed)
