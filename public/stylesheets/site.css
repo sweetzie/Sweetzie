@@ -87,15 +87,46 @@ header ul {
 	margin-right: 10px;
 }
 
-header ul li {
+header ul li  {
 	
 	float: left;
 	position: relative;
-	margin-left: 10px;
 	width: 100px;
 	padding-top: 5px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	
+}
+
+.nav, .nav a {
+	
+	border: none;
+	margin-top: 5px;
+	width: auto;
+	padding: 0px;
+	position: relative;
+	
+}
+
+header ul li:hover {
+	
+	background: #3c3c3c;
+	text-shadow: none;
+	
+}
+
+header ul li:hover a {
+	
+	color: #ffffff;
+	text-decoration: underline;
+	
+}
+
+.nav a:hover {
+	
+	text-decoration: underline;
+	color: #3c3c3c;
+	background: none;
 	
 }
 
@@ -106,7 +137,13 @@ header ul li a {
 	
 }
 
-header li ul {
+.nav li a {
+	
+	margin-left: none;
+	
+}
+
+.dropdown ul {
 	
 	display: none;
 	position: absolute;
@@ -116,15 +153,7 @@ header li ul {
 	
 }
 
-header li:hover {
-	
-	background: #3c3c3c;
-	color: #ffffff;
-	text-shadow: none;
-
-}
-
-header li:hover a {
+.dropwdown a:hover {
 	
 	color: #ffffff;
 	text-decoration: underline;
