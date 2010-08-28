@@ -1,0 +1,16 @@
+<div class="user-counts">
+	<a href="<%= grabs_user_path(@user) %>">
+		<h4>Grabs</h4>
+		<p><%= @user.items.count %></p>
+	</a>
+
+	<a href="<%= following_user_path(@user) %>">
+		<h4>Following</h4>
+		<p><%= @user.following.count %></p>
+	</a>
+
+	<a href="<%= followers_user_path(@user) %>">
+		<h4>Followers</h4>
+		<p><%= @user.followers.count %></p>
+	</a>
+</div>

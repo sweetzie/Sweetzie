@@ -14,11 +14,12 @@
 </div>
 
 <div class="right-column">
+	
 	<p>Welcome <%= current_user.first_name %></p>
 	
 	<div id="user-following-list">
 		
-		<h3>Following</h3>
+		<h3>Following (<%= current_user.following.count %>)</h3>
 		<ul>
 		<% current_user.following.each do |p| %>
 			<li>
@@ -27,5 +28,17 @@
 		<% end %>
 		</ul>
 	</div>
+	
+	<div id="recent-grab-list">
 		
+		<h3>Recent Items (<%= current_user.items.count %>)</h3>
+		<ul>
+		<% current_user.items.each do |i| %>
+			<li>
+				<%= link_to "#{i.name}", item_path(i) %>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+	
 </div>

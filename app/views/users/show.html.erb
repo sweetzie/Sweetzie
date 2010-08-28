@@ -1,3 +1,8 @@
-<h1><%= @user.name %></h1>
+<div class="left-column">
+	<h1><%= @user.name %></h1>
+	<p><%= render 'follow_form' if logged_in? %></p>
+</div>
 
-<p><%= render 'follow_form' if logged_in? %></div>
+<div class="right-column">
+	<%= render 'counts'%>
+</div>

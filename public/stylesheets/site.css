@@ -273,20 +273,22 @@ input[type=submit] {
 	
 }
 
-#user-following-list {
+#user-following-list, #recent-grab-list {
 	
 	margin-top: 20px;
 	
 	
 }
 
-#user-following-list ul {
+#user-following-list ul, #recent-grab-list ul {
 	
-	background: #ccc;
+	background: #e4e4e4;
 	padding: 10px;
 	overflow: hidden;
 	margin-top: 5px;
 	border-radius: 5px;
+	border: 1px solid #;
+	border-top: 1px solid #ccc;
 }
 
 #user-following-list li {
