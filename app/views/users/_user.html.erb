@@ -3,7 +3,7 @@
 		<h3><%= link_to "#{user.name} (@#{user.login})", user %></h3>
 	</div>
 	
-	<%= render 'counts' %>
+	<%= render :partial => 'counts', :locals => { :user => user } %>
 	
 </div>
 

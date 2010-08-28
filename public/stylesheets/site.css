@@ -95,16 +95,33 @@ header ul li  {
 	padding-top: 5px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	text-shadow: none;
 	
 }
 
 .nav, .nav a {
 	
 	border: none;
-	margin-top: 5px;
+	margin: 0;
 	width: auto;
 	padding: 0px;
 	position: relative;
+	
+}
+
+.nav {
+	
+	background: red;
+	padding: 5px 10px;
+	border-radius: 0px;
+	margin-right: 10px;
+	border-radius: 10px;
+	
+}
+
+.nav:last-child {
+	
+	margin-right: none;
 	
 }
 
@@ -122,11 +139,16 @@ header ul li:hover a {
 	
 }
 
-.nav a:hover {
+.nav:hover {
 	
 	text-decoration: underline;
-	color: #3c3c3c;
 	background: none;
+	
+}
+
+.nav:hover a {
+	
+	color: red;
 	
 }
 

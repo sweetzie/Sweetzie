@@ -1,8 +1,8 @@
 <div class="left-column">
 	<h1><%= @user.name %></h1>
-	<p><%= render 'follow_form' if logged_in? %></p>
+	<p><% if logged_in? %><%= render :partial => 'follow_form'%><% end %></p>
 </div>
 
 <div class="right-column">
-	<%= render 'counts'%>
+	<%= render :partial => 'counts', :locals => { :user => @user } %>
 </div>
