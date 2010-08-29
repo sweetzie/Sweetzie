@@ -1,6 +1,9 @@
 <div class="left-column">
 	<h1><%= @user.name %></h1>
 	<p><% if logged_in? %><%= render :partial => 'follow_form'%><% end %></p>
+	
+	<h2>Recent Activity</h2>
+
 </div>
 
 <div class="right-column">

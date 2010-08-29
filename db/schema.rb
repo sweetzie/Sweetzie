@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100824000709) do
+ActiveRecord::Schema.define(:version => 20100829195755) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "user_id",       :null => false
+    t.integer  "activity_type", :null => false
+    t.integer  "target_id",     :null => false
+    t.string   "target_type",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "activities", ["target_id", "target_type"], :name => "index_activities_on_target_id_and_target_type"
+  add_index "activities", ["user_id"], :name => "index_activities_on_user_id"
 
   create_table "grabs", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -36,6 +48,18 @@ ActiveRecord::Schema.define(:version => 20100824000709) do
 
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
+  create_table "timeline_events", :force => true do |t|
+    t.string   "event_type"
+    t.string   "subject_type"
+    t.string   "actor_type"
+    t.string   "secondary_subject_type"
+    t.integer  "subject_id"
+    t.integer  "actor_id"
+    t.integer  "secondary_subject_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40

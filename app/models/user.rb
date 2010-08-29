@@ -8,10 +8,25 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
   
+  # Timeline Nonsense
+  
+  RECENT_EVENTS_CONDITION = '(subject_type = \'Grab\')
+      OR (actor_type = \'User\'
+      AND actor_id IN (SELECT followed_id
+                      FROM relationships
+                      WHERE relationships.follower_id = #{id}))' 
+  
+  
   # Associations
   
   has_many :grabs, :dependent => :destroy
   has_many :items, :through => :grabs
+  
+  has_many  :recent_events, 
+            :class_name => 'TimelineEvent', 
+            :finder_sql => 'SELECT timeline_events.* FROM timeline_events WHERE ' + RECENT_EVENTS_CONDITION + ' ORDER BY timeline_events.created_at DESC', 
+            :counter_sql => 'SELECT COUNT(*) FROM timeline_events WHERE ' + RECENT_EVENTS_CONDITION  
+  
   
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed
