@@ -9,10 +9,12 @@
 		
 		<h2>Recently</h2>
 		
-		<%= render_timeline current_user.recent_events %>
-		
-		<%= 'Hello world!!' %>
-		
+		<% Activity.all.each do |activity| %>
+			<% if current_user.following.include?(activity.user) %>
+			<h3><%= activity.user.login %></h3>
+			<p>The activity references an <%= activity.target_type %></p>
+			<% end %>
+		<% end %>
 		
 	</div>
 	

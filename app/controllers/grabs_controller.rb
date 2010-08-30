@@ -6,6 +6,7 @@ class GrabsController < ApplicationController
   def create
     current_user.grab!(@item)
     redirect_to @item
+    Activity.add(current_user, Activity::NEW_GRAB, @item)
   end
   
   def destroy

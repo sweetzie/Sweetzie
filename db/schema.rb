@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100829195755) do
+ActiveRecord::Schema.define(:version => 20100830015710) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",       :null => false
@@ -48,18 +48,6 @@ ActiveRecord::Schema.define(:version => 20100829195755) do
 
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
-
-  create_table "timeline_events", :force => true do |t|
-    t.string   "event_type"
-    t.string   "subject_type"
-    t.string   "actor_type"
-    t.string   "secondary_subject_type"
-    t.integer  "subject_id"
-    t.integer  "actor_id"
-    t.integer  "secondary_subject_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40

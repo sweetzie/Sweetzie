@@ -3,7 +3,11 @@
 	<p><% if logged_in? %><%= render :partial => 'follow_form'%><% end %></p>
 	
 	<h2>Recent Activity</h2>
-
+	
+	<% @user.activities.each do |activity| %>
+		<p><%= activity.target_type %></p>
+	<% end %>
+	
 </div>
 
 <div class="right-column">

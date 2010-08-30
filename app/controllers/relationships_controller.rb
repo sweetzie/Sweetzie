@@ -6,6 +6,7 @@ class RelationshipsController < ApplicationController
   def create
     current_user.follow!(@user)
     redirect_to @user
+    Activity.add(current_user, Activity::NEW_RELATIONSHIP, @user)
   end
 
   def destroy
