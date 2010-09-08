@@ -10,10 +10,11 @@
 		<h2>Recently</h2>
 		
 		<% Activity.all.each do |activity| %>
+			<ol>
 			<% if current_user.following.include?(activity.user) %>
-			<h3><%= activity.user.login %></h3>
-			<p>The activity references an <%= activity.target_type %></p>
+				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id) %>
 			<% end %>
+			</ol>
 		<% end %>
 		
 	</div>

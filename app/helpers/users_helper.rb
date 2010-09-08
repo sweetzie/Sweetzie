@@ -89,5 +89,20 @@ module UsersHelper
       link_to_login_with_IP content_text, options
     end
   end
+  
+  def show_feed_item(user, activity, target)
+    case activity
+      when 1
+        render :partial => 'feed/grab', :locals => { :user => user, :item => target }
+      when 2
+        render :partial => 'feed/relationship', :locals => { :friender => user, :friended => target }        
+      when 3
+        render :partial => 'feed/comment'
+    end
+  end      
 
+  def show_name(id)
+    user = User.find_by_id(id)
+    return user.name
+  end
 end

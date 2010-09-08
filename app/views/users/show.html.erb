@@ -4,10 +4,11 @@
 	
 	<h2>Recent Activity</h2>
 	
+	<ol>
 	<% @user.activities.each do |activity| %>
-		<p><%= activity.target_type %></p>
+		<%= show_feed_item(@user, activity.activity_type, activity.target_id) %>
 	<% end %>
-	
+	</ol>
 </div>
 
 <div class="right-column">

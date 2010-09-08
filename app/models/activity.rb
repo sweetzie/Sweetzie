@@ -3,7 +3,7 @@ class Activity < ActiveRecord::Base
   belongs_to :user
   belongs_to :target, :polymorphic => true
   
-  default_scope :order => 'activities.created_at DESC', :limit => 10
+  default_scope :order => 'activities.created_at DESC'
   
   NEW_GRAB                = 1 # A user grabs an item
   NEW_RELATIONSHIP        = 2 # A user follows another user

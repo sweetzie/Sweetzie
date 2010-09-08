@@ -9,7 +9,7 @@ module AuthenticatedSystem
     # Accesses the current user from the session.
     # Future calls avoid the database because nil is not equal to false.
     def current_user
-      @current_user ||= (login_from_session || login_from_basic_auth || login_from_cookie) unless @current_user == false
+      @current_user ||= (login_from_session || login_from_api_key || login_from_basic_auth || login_from_cookie) unless @current_user == false
     end
 
     # Store the given user id in the session.
@@ -33,6 +33,10 @@ module AuthenticatedSystem
     #
     def authorized?(action = action_name, resource = nil)
       logged_in?
+    end
+
+    def login_from_api_key
+      self.current_user = User.find_by_api_key(params[:api_key]) unless params[:api_key].empty?
     end
 
     # Filter method to enforce a login requirement.

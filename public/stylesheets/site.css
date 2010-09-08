@@ -20,6 +20,7 @@ body {
 a { color: #1c1c1c; }
 
 ul { list-style-type: none;}
+ol { list-style-type: none;}
 
 #container {
 	
@@ -300,8 +301,8 @@ input[type=submit] {
 .user-counts {
 	
 	float: right;
-	background: #ccc;
-	border: 1px solid #3c3c3c;
+	background: #e4e4e4;
+	border-top: 1px solid #ccc;
 	border-radius: 5px;
 	
 }
@@ -337,7 +338,6 @@ input[type=submit] {
 	overflow: hidden;
 	margin-top: 5px;
 	border-radius: 5px;
-	border: 1px solid #;
 	border-top: 1px solid #ccc;
 }
 
@@ -348,3 +348,25 @@ input[type=submit] {
 	
 }
 
+.activity-feed {
+	
+	
+	
+}
+
+.activity-feed li {
+	
+	font-size: .8em;
+	background: #e4e4e4;
+	padding: 10px;
+	margin: 10px 0px;
+	border-radius: 2px;
+	border-top: 1px solid #ccc;
+	width: 580px;
+}
+
+.activity-feed a {
+	
+	font-weight: bold;
+	
+}
