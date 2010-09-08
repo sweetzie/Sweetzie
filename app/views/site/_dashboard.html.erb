@@ -14,6 +14,9 @@
 			<% if current_user.following.include?(activity.user) %>
 				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id) %>
 			<% end %>
+			<% if activity.user == current_user %>
+				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id) %>
+			<% end %>
 			</ol>
 		<% end %>
 		
