@@ -1,2 +1,15 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<h2>Add an Item</h2>
+
+<p>Can't find an item that you love? Chances are it hasn't been added to Sweetzie yet. Why not add it so others can discover it's greatness! (Even better everyone will see your name as the item's founder.)</p>
+
+<% form_for :item do |i| %>
+
+	<%= i.hidden_field :creator_id %>
+	
+	<h3><%= i.label :barcode %></h3>
+	<p><%= i.text_field :barcode %></p>
+	<p>Start by giving us the item's barcode (temporary until we get scanning up and working). We'll do some magic and fill in all the rest of the stuff.</p>
+
+	<%= submit_tag "Magic!" %>
+
+<% end %>

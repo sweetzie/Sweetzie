@@ -1,3 +1,9 @@
 <li>
-	<p><%= link_to friender.name, friender %></a> started following <%= link_to show_name(friended) %></p>
+	<p>
+	<% if friender.id == current_user.id %>
+		<%= link_to "You", current_user %>
+	<% else %>
+		<%= link_to friender.name, friender %>
+	<% end %>
+	 started following <%= link_to show_name(friended) %></p>
 </li>

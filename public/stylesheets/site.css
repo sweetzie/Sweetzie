@@ -51,6 +51,20 @@ h4 { font-size: 1em; }
 h5 { font-size: .8em; }
 h6 { font-size: .5em; }
 
+input[type=submit] {
+	
+	background: #4f7e3a;
+	font-size: .8em;
+	border: none;
+	border-top: 1px solid #60ab3f;
+	border-radius: 20px;
+	color: #ffffff;
+	text-shadow: none;
+	padding: 8px 20px;
+	}
+	
+}
+
 
 header {
 	
@@ -112,7 +126,6 @@ header ul li  {
 
 .nav {
 	
-	background: red;
 	padding: 5px 10px;
 	margin-right: 10px;
 	border-radius: 14px;
@@ -148,7 +161,7 @@ header ul li:hover a {
 
 .nav:hover a {
 	
-	color: red;
+	color: #1f1f1f ;
 	
 }
 
@@ -247,17 +260,6 @@ input[type=text], input[type=password] {
 	letter-spacing: 1.8px;
 }
 
-input[type=submit] {
-	
-	background: red;
-	border-radius: 20px;
-	border: none;
-	color: #ffffff;
-	text-shadow: none;
-	font-size: 1em;
-	padding: 8px 20px;
-}
-
 #login-bg {
 	
 	background: #fff;
@@ -349,9 +351,6 @@ input[type=submit] {
 }
 
 .activity-feed {
-	
-	
-	
 }
 
 .activity-feed li {
@@ -368,5 +367,17 @@ input[type=submit] {
 .activity-feed a {
 	
 	font-weight: bold;
+	
+}
+
+.activity-feed img {
+	
+	border: 3px solid #ccc;
+	border-radius: 5px;
+
+}
+
+.activity-feed p {
+
 	
 }

@@ -102,7 +102,11 @@ module UsersHelper
   end      
 
   def show_name(id)
-    user = User.find_by_id(id)
-    return user.name
+    if id == current_user.id
+      return "You"
+    else
+      user = User.find_by_id(id)
+      return user.name
+    end
   end
 end

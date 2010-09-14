@@ -14,7 +14,7 @@
 	<% elsif user.id == current_user.id %>
 		<p>That's You</p>
 	<% else %>
-		<%= link_to "Follow" %>
+		<%= link_to "Follow", relationships_path, :method => :post  %>
 	<% end %>
 <% end %>
 </div>
