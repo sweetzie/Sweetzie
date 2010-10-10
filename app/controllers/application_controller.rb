@@ -4,8 +4,7 @@
 class ApplicationController < ActionController::Base
   
   #before_filter :ensure_domain
-  
-  # Be sure to include AuthenticationSystem in Application Controller instead
+
   include AuthenticatedSystem
   
   helper :all # include all helpers, all the time
