@@ -31,13 +31,15 @@ ol { list-style-type: none;}
 #content {
 	
 	clear: both;
-	background: #ffffff;
+	background: #f8f8f8;
 	margin-top: 10px;
 	padding: 10px;
-	-webkit-box-shadow: #cccccc 0px 0px 2px;
+	-webkit-box-shadow: #1c1c1c 0px 0px 1px;
 	overflow: hidden;
 	position: relative;
 	z-index: 0;
+	border: 1px solid #ffffff;
+	margin-bottom: 20px;
 	
 }
 
@@ -335,11 +337,10 @@ input[type=text], input[type=password] {
 
 #user-following-list ul, #recent-grab-list ul {
 	
-	background: #e4e4e4;
+	background: #f8f8f8;
 	padding: 10px;
 	overflow: hidden;
 	margin-top: 5px;
-	border-radius: 5px;
 	border-top: 1px solid #ccc;
 }
 
@@ -351,17 +352,28 @@ input[type=text], input[type=password] {
 }
 
 .activity-feed {
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	
 }
 
 .activity-feed li {
 	
 	font-size: .8em;
-	background: #e4e4e4;
 	padding: 10px;
-	margin: 10px 0px;
-	border-radius: 2px;
+	margin: 5px 0px;
 	border-top: 1px solid #ccc;
 	width: 580px;
+	background: #f8f8f8;
+	float: left;
+	clear: both;
+}
+
+.activity-feed li:hover {
+	
+	background: #f2f2f2;
+	
 }
 
 .activity-feed a {
@@ -374,10 +386,13 @@ input[type=text], input[type=password] {
 	
 	border: 3px solid #ccc;
 	border-radius: 5px;
+	float: left;
+	margin-right: 10px;
 
 }
 
 .activity-feed p {
-
+	
+	float: left;
 	
 }
