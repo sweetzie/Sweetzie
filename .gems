@@ -3,3 +3,4 @@ tlsmail
 sinatra -v 1.0
 sequel -v 3.13.0
 taps -v 0.3.11
+paperclip -v 2.3.4
