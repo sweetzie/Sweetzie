@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   has_many :items, :through => :grabs
 
   has_many :activities
+  
+  has_attached_file :avatar
 
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed

@@ -2,15 +2,35 @@
 
 <% form_for :user do |f| %>
 	
-	<%= f.label :login, "Username" %>
-	<%= f.text_field :login, :value => current_user.login %>
+	<p>
+		<%= f.label :login, "Username" %>
+		<%= f.text_field :login, :value => current_user.login %>
+	</p>
 	
-	<%= f.label :email %>
-	<%= f.text_field :email, :value => current_user.email %>
+	<p>
+		<%= f.label :email %>
+		<%= f.text_field :email, :value => current_user.email %>
+	</p>
+	
+	<p>
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name %>
+	</p>
+	
+	<p>
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name %>
+	</p>
+	
+	<p>
+		<%= f.file_field :avatar%>
+	</p>
+	
 	
 	<%= submit_tag "Save"%>
 	
 <% end %>
+
 
 <% if current_user.api_is_enabled? %>
 	

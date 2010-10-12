@@ -12,17 +12,21 @@ class UsersController < ApplicationController
   end
   
   def edit
-    # stuff
+    @user = User.find_by_login(params[:id])
   end
   
   def update 
-    # stuff
+      @user = User.find_by_login(params[:id])
+        if @user.update_attributes(params[:user])
+          redirect_to(@user)
+        else
+          render "edit"
+        end
   end
   
   # render new.rhtml
   def new
-    @user = User.new(:invitation_token => params[:invitation_token])
-    @user.email = @user.invitation.recipient_email if @user.invitation
+    @user = User.new()
   end
  
   def create
