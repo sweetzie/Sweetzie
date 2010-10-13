@@ -3,7 +3,8 @@ class SessionsController < ApplicationController
   # render new.erb.html
   def new
   end
-
+  # create a new session
+  
   def create
     logout_keeping_session!
     user = User.authenticate(params[:login], params[:password])
@@ -24,7 +25,8 @@ class SessionsController < ApplicationController
       render :action => 'new'
     end
   end
-
+  
+  # Destroy the session, "Logout"
   def destroy
     logout_killing_session!
     flash[:notice] = "You have been logged out. Thanks for using Sweetzie!"
