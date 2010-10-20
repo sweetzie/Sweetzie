@@ -101,19 +101,10 @@ module UsersHelper
     end
   end      
 
-  def show_name(id)
-    if id == current_user.id
-      return "You"
-    else
-      user = User.find_by_id(id)
-      return user.name
-    end
-  end
+  # Get the specified user to show their attributes in the activity feed
   
-  # !-- HACK --!  used for linking to secondary user in the activity feed
-  
-  def show_login(id)
-    user = User.find_by_id(id)
-    return user.login
+  def get_user_for_feed(id)
+    @user = User.find_by_id(id)
+    return @user
   end
 end
