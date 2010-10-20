@@ -1,6 +1,7 @@
 <div class="user-details">
 	<div class="user-info">
-		<h3><%= link_to "#{user.name} (@#{user.login})", user %></h3>
+		<%= image_tag user.avatar.url(:thumb) %>
+		<h3><%= link_to user.name, user_path(user) %></h3>
 	</div>
 	
 	<%= render :partial => 'counts', :locals => { :user => user } %>

@@ -103,8 +103,18 @@ module UsersHelper
 
   # Get the specified user to show their attributes in the activity feed
   
-  def get_user_for_feed(id)
-    @user = User.find_by_id(id)
-    return @user
+  def show_name(id)
+    user = User.find_by_id(id)
+    if user.id == current_user.id
+      return "You"
+    else
+      return user.name
+    end
   end
+  
+  def show_login(id)
+    user = User.find_by_id(id)
+    return user.login
+  end
+  
 end

@@ -19,8 +19,10 @@ class UsersController < ApplicationController
       @user = User.find_by_login(params[:id])
         if @user.update_attributes(params[:user])
           redirect_to(@user)
+          flash[:notice] = "Your settings have been successfully updated!"
         else
           render "edit"
+          flash[:notice] = "Something went wrong..."
         end
   end
   
