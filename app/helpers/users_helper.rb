@@ -109,4 +109,11 @@ module UsersHelper
       return user.name
     end
   end
+  
+  # !-- HACK --!  used for linking to secondary user in the activity feed
+  
+  def show_login(id)
+    user = User.find_by_id(id)
+    return user.login
+  end
 end

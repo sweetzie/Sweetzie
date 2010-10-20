@@ -5,5 +5,5 @@
 	<% else %>
 		<%= link_to friender.name, friender %>
 	<% end %>
-	 started following <%= link_to show_name(friended) %></p>
+	 started following <%= link_to "#{show_name(friended)}", user_path(show_login(friended)) %></p>
 </li>
