@@ -21,7 +21,7 @@ development:
   database: sweetzie_development
   pool: 5
   username: root
-  password:
+  password: nov71990
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
