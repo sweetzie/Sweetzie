@@ -14,9 +14,17 @@ class ItemsController < ApplicationController
   
   def new
     @item = Item.new #create a new instance of an item
+    @barcode = params[:barcode]
   end
 
   def create
+     @item = Item.new(params[:item])
+      if @item.save
+        redirect_to @item
+      else
+        render 'new'
+        flash[:notice] = 'Something went wrong'
+      end
   end
 
 end
