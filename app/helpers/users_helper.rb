@@ -99,7 +99,7 @@ module UsersHelper
       when 3
         render :partial => 'feed/comment'
       when 5
-        render :partial => 'feed/new_item', :locals => { :user = user, :item => target }
+        render :partial => 'feed/new_item', :locals => { :user => user, :item => target }
     end
   end      
 
