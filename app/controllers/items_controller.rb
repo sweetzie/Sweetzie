@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   def create
      @item = Item.new(params[:item])
       if @item.save
+        Activity.add(current_user, Activity::NEW_ITEM, @item) # record the activity for the feed
         redirect_to @item
       else
         render 'new'
