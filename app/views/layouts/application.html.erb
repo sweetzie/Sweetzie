@@ -4,6 +4,19 @@
 		<title>Sweetzie</title>
 		<%= stylesheet_link_tag 'reset' %>
 		<%= stylesheet_link_tag 'site' %>
+		<script language="JavaScript">
+		      
+			function scan() {
+			
+				setTimeout(function() {
+				// if pic2shop not installed yet, go to App Store
+		    	window.location = "http://itunes.com/apps/pic2shop";
+		    }, 25);
+		    // launch pic2shop and tell it to open Google Products with scan result
+				window.location="pic2shop://scan?callback=http%3A//sweetzie.com/scan/EAN";
+			}
+		</script>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	</head>
 	<body>
 		<div id="container">

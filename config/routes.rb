@@ -17,6 +17,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :key
   
   map.resources :grabs, :only => [:create]
+  
+  map.connect '/items/new/:barcode', :controller => 'items', :action => 'new'
+  map.connect '/scan/:barcode', :controller => 'scan', :action => 'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

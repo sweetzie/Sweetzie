@@ -14,9 +14,18 @@ class ItemsController < ApplicationController
   
   def new
     @item = Item.new #create a new instance of an item
+    @barcode = params[:barcode]
   end
 
   def create
+     @item = Item.new(params[:item])
+      if @item.save
+        Activity.add(current_user, Activity::NEW_ITEM, @item) # record the activity for the feed
+        redirect_to @item
+      else
+        render 'new'
+        flash[:notice] = 'Something went wrong'
+      end
   end
 
 end
