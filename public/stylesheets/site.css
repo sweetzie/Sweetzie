@@ -422,3 +422,19 @@ input[type=text], input[type=password] {
 #scan-button {
 	display: none;	
 }
+
+/* Sign Up button */
+
+.sign-up {
+	
+	background: #87b650;
+	float: right;
+	font-size: .8em;
+	border: none;
+	border: 1px solid #69913a;
+	border-top: 1px solid #9cc270;
+	color: #ffffff;
+	text-shadow: none;
+	padding: 20px 20px;
+
+}

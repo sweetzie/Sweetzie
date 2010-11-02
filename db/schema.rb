@@ -30,15 +30,6 @@ ActiveRecord::Schema.define(:version => 20101011052229) do
     t.datetime "updated_at"
   end
 
-  create_table "invitations", :force => true do |t|
-    t.integer  "sender_id"
-    t.string   "recipient_email"
-    t.string   "token"
-    t.datetime "sent_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "items", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -59,21 +50,9 @@ ActiveRecord::Schema.define(:version => 20101011052229) do
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
-  create_table "timeline_events", :force => true do |t|
-    t.string   "event_type"
-    t.string   "subject_type"
-    t.string   "actor_type"
-    t.string   "secondary_subject_type"
-    t.integer  "subject_id"
-    t.integer  "actor_id"
-    t.integer  "secondary_subject_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
-    t.string   "name",                      :limit => 100
+    t.string   "name",                      :limit => 100, :default => ""
     t.string   "email",                     :limit => 100
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
@@ -85,9 +64,9 @@ ActiveRecord::Schema.define(:version => 20101011052229) do
     t.datetime "activated_at"
     t.integer  "invitation_id"
     t.integer  "invitation_limit"
-    t.string   "first_name"
     t.string   "last_name"
-    t.string   "api_key",                   :limit => 40
+    t.string   "first_name"
+    t.string   "api_key",                   :limit => 40,  :default => ""
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"

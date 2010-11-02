@@ -20,9 +20,9 @@ development:
   reconnect: false
   database: sweetzie_development
   pool: 5
-  username: root
-  password: nov71990
-  socket: /tmp/mysql.sock
+  username: sweetzie
+  password: sweetzie
+  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -33,9 +33,9 @@ test:
   reconnect: false
   database: sweetzie_test
   pool: 5
-  username: root
+  username: sweetzie
   password:
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql
@@ -43,6 +43,6 @@ production:
   reconnect: false
   database: sweetzie_production
   pool: 5
-  username: root
+  username: sweetzie
   password: 
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
