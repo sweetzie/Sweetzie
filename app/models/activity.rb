@@ -3,6 +3,8 @@ class Activity < ActiveRecord::Base
   belongs_to :user
   belongs_to :target, :polymorphic => true
   
+  has_many :comments
+  
   default_scope :order => 'activities.created_at DESC'
   
   NEW_GRAB                = 1 # A user grabs an item
