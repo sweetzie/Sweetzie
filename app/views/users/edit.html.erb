@@ -1,35 +1,36 @@
 <h2>Your Settings</h2>
 
-<% form_for @user, :html => { :multipart => true } do |f| %>
+<% form_for @user, :html => { :multipart => true } do |form| %>
 	
 	<p>
-		<%= f.label :login, "Username" %>
-		<%= f.text_field :login, :value => current_user.login %>
+		<%= form.label :login, "Username" %>
+		<%= form.text_field :login, :value => current_user.login %>
 	</p>
 	
 	<p>
-		<%= f.label :email %>
-		<%= f.text_field :email, :value => current_user.email %>
+		<%= form.label :email %>
+		<%= form.text_field :email, :value => current_user.email %>
 	</p>
 	
 	<p>
-		<%= f.label :first_name %>
-		<%= f.text_field :first_name %>
+		<%= form.label :first_name %>
+		<%= form.text_field :first_name %>
 	</p>
 	
 	<p>
-		<%= f.label :last_name %>
-		<%= f.text_field :last_name %>
+		<%= form.label :last_name %>
+		<%= form.text_field :last_name %>
 	</p>
 	
 	<p>
-		<%= f.file_field :avatar%>
+		<%= form.label :avatar %><br />
+		<%= form.file_field :avatar%>
 	</p>
 	
-	<% f.hidden_field :name, :value => "#{:first_name} #{:last_name}" %>
+	<% form.hidden_field :name, :value => "#{:first_name} #{:last_name}" %>
 	
 	
-	<%= submit_tag "Save"%>
+	<%= form.submit "Save" %>
 	
 <% end %>
 

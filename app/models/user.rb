@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   has_many :reverse_relationships, :foreign_key => "followed_id", :class_name => "Relationship", :dependent => :destroy
   has_many :followers, :through => :reverse_relationships, :source => :follower
   
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :avatar, :styles => { :thumb => "25x25#", :small => "50x50#" }
   
   # Validations
   
@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :name, :password, :password_confirmation, :first_name, :last_name
+  attr_accessible :login, :email, :name, :password, :password_confirmation, :first_name, :last_name, :avatar
   
   # change style of urls
   

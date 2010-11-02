@@ -1,8 +1,10 @@
 <li>
 	<p>
 	<% if friender.id == current_user.id %>
+		<%= image_tag current_user.avatar.url(:small) %>
 		<%= link_to "You", current_user %>
 	<% else %>
+		<%= image_tag friender.avatar.url(:small) %>
 		<%= link_to friender.name, friender %>
 	<% end %>
 	 started following <%= link_to show_name(friended), user_path(show_login(friended)) %></p>

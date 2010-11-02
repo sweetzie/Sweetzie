@@ -1,9 +1,10 @@
 <li>
-	<img src="#" width="50px" height="50px" />
 	<p>
-	<% if user.id == current_user.id %>
+	<% if user.id = current_user.id %>
+		<%= image_tag current_user.avatar.url(:small) %>
 		<%= link_to "You", current_user %>
 	<% else %>
+		<%= image_tag user.avatar.url(:small) %>
 		<%= link_to user.name, user %>
 	<% end %>
 	created <%= link_to "#{find_item(item)}", item_path(item) %></p>

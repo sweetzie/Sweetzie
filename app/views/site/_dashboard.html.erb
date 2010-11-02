@@ -2,7 +2,7 @@
 	<h1>Dashboard</h1>
 	
 	<form>
-		<input type="buttom" onclick="scan();" value="Scan A New Item" />
+		<input id="scan-button" type="buttom" onclick="scan();" value="Scan A New Item" />
 	</form>
 	
 	<div class="activity-feed">
@@ -34,7 +34,7 @@
 		<ul>
 		<% current_user.following.each do |p| %>
 			<li>
-				<%= link_to "#{p.first_name }", user_path(p) %></a>
+				<a href="<%= user_path(p) %>"><%= image_tag p.avatar.url(:small) %></a>
 			</li>
 		<% end %>
 		</ul>
