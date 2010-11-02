@@ -7,17 +7,17 @@
 	<div class="activity-feed">
 		
 		<h2>Recently</h2>
-		
+		<ol>
 		<% @activities.each do |activity| %>
-			<ol>
 			<% if current_user.following.include?(activity.user) %>
-				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id) %>
+				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id, activity.id) %>
 			<% end %>
 			<% if activity.user == current_user %>
-				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id) %>
+				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id, activity.id) %>
 			<% end %>
-			</ol>
+			
 		<% end %>
+		</ol>
 		
 		<%= will_paginate @activities %>
 		

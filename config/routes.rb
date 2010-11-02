@@ -13,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :items
   map.resource :session  
   map.resources :site
+  map.resources :comments
   
   map.resource :key
   

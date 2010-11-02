@@ -10,7 +10,7 @@
 				
 		<ol>
 			<% @activities.each do |activity| %>
-				<%= show_feed_item(@user, activity.activity_type, activity.target_id) %>
+				<%= show_feed_item(@user, activity.activity_type, activity.target_id, activity.id) %>
 			<% end %>
 		</ol>
 		

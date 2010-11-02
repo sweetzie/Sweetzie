@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101102045943) do
+ActiveRecord::Schema.define(:version => 20101102051158) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",       :null => false
@@ -26,10 +26,9 @@ ActiveRecord::Schema.define(:version => 20101102045943) do
   create_table "comments", :force => true do |t|
     t.string   "comment"
     t.integer  "user_id"
-    t.integer  "relation_id"
-    t.integer  "relation_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "activity_id"
   end
 
   create_table "grabs", :force => true do |t|

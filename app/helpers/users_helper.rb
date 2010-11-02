@@ -90,10 +90,10 @@ module UsersHelper
     end
   end
   
-  def show_feed_item(user, activity, target)
+  def show_feed_item(user, activity, target, activity_id)
     case activity
       when 1
-        render :partial => 'feed/grab', :locals => { :user => user, :item => target }
+        render :partial => 'feed/grab', :locals => { :user => user, :item => target, :activity_id => activity_id }
       when 2
         render :partial => 'feed/relationship', :locals => { :friender => user, :friended => target }        
       when 3

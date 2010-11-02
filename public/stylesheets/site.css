@@ -388,7 +388,7 @@ input[type=text], input[type=password] {
 	font-size: .8em;
 	padding: 10px;
 	margin: 5px 0px;
-	border-top: 1px solid #ccc;
+/*	border-top: 1px solid #ccc;*/
 	background: #f8f8f8;
 	float: left;
 	clear: both;
@@ -421,4 +421,27 @@ input[type=text], input[type=password] {
 
 #scan-button {
 	display: none;	
+}
+
+.comments {
+	
+	float: left;
+	clear: both;
+	background: #dedede;
+	width: 465px;
+	margin-left: 60px;
+	margin-top: 10px;
+	padding: 5px;
+	border-top: 1px solid #ccc;
+	
+}
+
+.comment-form input[type=text] {
+	
+	border-radius: 0px;
+	font-size: .8em;
+	margin: 0px;
+	border: 1px solid #ccc;
+	width: 360px;
+	
 }

@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   has_many :items, :through => :grabs
 
   has_many :activities
-  
+  has_many :comments
   
 
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
@@ -87,6 +87,12 @@ class User < ActiveRecord::Base
   
   def grab!(item)
     grabs.create!(:item_id => item.id)
+  end
+  
+  ## ------------------- Comments ------------------ ##
+  
+  def comment!(activity)
+    comments.create!(:activity_id => activity.id)
   end
   
   
