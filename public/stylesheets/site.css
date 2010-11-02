@@ -38,7 +38,7 @@ ol { list-style-type: none;}
 	margin-bottom: 20px;
 	float: left;
 	clear: both;
-	width: 100%;
+	width: 870px;
 	
 }
 
@@ -224,14 +224,15 @@ header li:hover ul li a {
 .left-column {
 	
 	float:left;
-	width: 70%;
+	width: 550px;
 	
 }
 
 .right-column {
 	
-	float: right;
-	width: 30%;
+	float: left;
+	width: 300px;
+	margin-left: 20px;
 	
 }
 label {
@@ -287,20 +288,38 @@ input[type=text], input[type=password] {
 
 .user-details {
 	padding: 10px 0px;
-	width: 535px;
+	width: 735px;
 	float: left;
+/*	background: blue;*/
+	clear: both;
+	margin-bottom: 10px;
 }
 
 .user-info {
 	
+/*	background: red;*/
 	float: left;
-	padding-top: 12px;
+	width: 350px;
+	padding-top: 6px;
 	
+}
+
+.user-info img {
+	
+	float: left;
+	
+}
+
+.user-info h3 {
+	
+	float: left;
+	margin-left: 10px;
+	padding-top: 10px;
 }
 
 .user-counts {
 	
-	float: right;
+	float: left;
 	background: #e4e4e4;
 	border-top: 1px solid #ccc;
 	border-radius: 5px;
@@ -327,6 +346,8 @@ input[type=text], input[type=password] {
 #user-following-list, #recent-grab-list {
 	
 	margin-top: 20px;
+	float: left;
+	clear: both;
 	
 	
 }
@@ -334,8 +355,9 @@ input[type=text], input[type=password] {
 #user-following-list ul, #recent-grab-list ul {
 	
 	background: #f8f8f8;
-	padding: 10px;
-	overflow: hidden;
+	padding: 10px 0px;
+	float: left;
+	clear: both;
 	margin-top: 5px;
 	border-top: 1px solid #ccc;
 }
@@ -349,8 +371,15 @@ input[type=text], input[type=password] {
 
 .activity-feed {
 	float: left;
+/*	background: red;*/
 	width: 100%;
-	margin-top: 10px;
+	clear: both;
+	
+}
+
+.activity-feed ol {
+	
+	margin-top: 28px;
 	
 }
 
@@ -360,10 +389,10 @@ input[type=text], input[type=password] {
 	padding: 10px;
 	margin: 5px 0px;
 	border-top: 1px solid #ccc;
-	width: 580px;
 	background: #f8f8f8;
 	float: left;
 	clear: both;
+	width: 530px;
 }
 
 .activity-feed li:hover {
