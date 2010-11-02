@@ -7,12 +7,14 @@
 	
 	
 	<div class="activity-feed">	
-		
+				
 		<ol>
 			<% @activities.each do |activity| %>
 				<%= show_feed_item(@user, activity.activity_type, activity.target_id) %>
 			<% end %>
 		</ol>
+		
+		<%= will_paginate @activities %>
 	
 	</div>
 </div>
