@@ -9,7 +9,7 @@
 	<div class="activity-feed">	
 		
 		<ol>
-			<% @user.activities.each do |activity| %>
+			<% @activities.each do |activity| %>
 				<%= show_feed_item(@user, activity.activity_type, activity.target_id) %>
 			<% end %>
 		</ol>
@@ -18,5 +18,4 @@
 </div>
 
 <div class="right-column">
-
 </div>

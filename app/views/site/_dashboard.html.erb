@@ -8,7 +8,7 @@
 		
 		<h2>Recently</h2>
 		
-		<% Activity.all.each do |activity| %>
+		<% @activities.each do |activity| %>
 			<ol>
 			<% if current_user.following.include?(activity.user) %>
 				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id) %>

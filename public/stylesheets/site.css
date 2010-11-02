@@ -413,17 +413,12 @@ input[type=text], input[type=password] {
 /*	border-radius: 5px;*/
 	float: left;
 	margin-right: 10px;
-
 }
 
 .activity-feed p {
-	
 	float: left;
-	
 }
 
 #scan-button {
-	
-	display: none;
-	
+	display: none;	
 }
