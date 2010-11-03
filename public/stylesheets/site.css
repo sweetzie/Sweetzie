@@ -383,7 +383,7 @@ input[type=text], input[type=password] {
 	
 }
 
-.activity-feed li {
+.activity-feed li, .reviews ol li {
 	
 	font-size: .8em;
 	padding: 10px;
@@ -395,19 +395,19 @@ input[type=text], input[type=password] {
 	width: 530px;
 }
 
-.activity-feed li:hover {
+.activity-feed li:hover, .reviews ol li:hover {
 	
 	background: #f2f2f2;
 	
 }
 
-.activity-feed a {
+.activity-feed a, .reviews ol li a {
 	
 	font-weight: bold;
 	
 }
 
-.activity-feed img {
+.activity-feed img, .reviews ol li img {
 	
 /*	border: 3px solid #ccc;*/
 /*	border-radius: 5px;*/
@@ -415,7 +415,7 @@ input[type=text], input[type=password] {
 	margin-right: 10px;
 }
 
-.activity-feed p {
+.activity-feed p, .reviews ol li p {
 	float: left;
 }
 
@@ -447,13 +447,7 @@ input[type=text], input[type=password] {
 
 .reviews ol {
 	
-	
-	
-}
-
-.reviews ol li {
-	
-	border-top: 1px solid #dedede;
+	margin-top: 20px;
 	
 }
 

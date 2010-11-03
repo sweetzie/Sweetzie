@@ -1,0 +1,4 @@
+<%= image_tag @review.user.avatar.url(:small) %>
+<p><%= link_to "#{@review.user.name}", user_path(@review.user) %> reviewed <%= link_to "#{@review.item.name}", item_path(@review.item) %></p>
+
+<p><%= @review.item.description %></p>

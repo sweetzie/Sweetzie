@@ -10,26 +10,7 @@
 		
 		<h2>Reviews</h2>
 		
-		<div id="review-form">
-		<% form_for @review do |form| %>
-			
-			<%= form.hidden_field :user_id, :value => current_user.id %>
-			<%= form.hidden_field :item_id, :value => @item.id %>
-			
-			<p>
-				<%= form.label :review %><br />
-				<%= form.text_area :review %>
-			</p>
-			
-			<p>
-				<%= form.label :rating %><br />
-				<%= form.text_field :rating %>
-			</p>
-			
-			<%= form.submit "Review" %>
-			
-		<% end %>
-		</div>
+		<%= render 'review_form', :locals => { :item => @item, :review => @review } %>
 		
 		<% if @item.reviews.empty? %>
 			<p>No one has reviewed this item yet. Be the first!</p>

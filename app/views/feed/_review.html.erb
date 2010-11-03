@@ -1,1 +1,12 @@
-Reviewed an item.
+<li>
+	<p>
+	<% if user.id == current_user.id %>
+		<%= image_tag current_user.avatar.url(:small) %>
+		<%= link_to "You", current_user %>
+	<% else %>
+		<%= image_tag user.avatar.url(:small) %>
+		<%= link_to user.name, user %>
+	<% end %>
+	reviewed an item. <%= link_to "#{find_review(review)}", review_path(review) %></p>
+	<p class="review-preview"></p>
+</li>

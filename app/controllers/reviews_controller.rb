@@ -2,6 +2,10 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
   end
+  
+  def show
+    @review = Review.find_by_id(params[:id])
+  end
 
   def create
     @review = Review.new(params[:review])
