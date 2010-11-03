@@ -10,6 +10,8 @@ class ItemsController < ApplicationController
   
   def show
     @item = Item.find_by_id(params[:id]) #find the particular item
+    @review = Review.new
+    session[:return_to] ||= request.referer
   end
   
   def new

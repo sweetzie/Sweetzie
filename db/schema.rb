@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101011052229) do
+ActiveRecord::Schema.define(:version => 20101102225409) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",       :null => false
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(:version => 20101011052229) do
 
   add_index "activities", ["target_id", "target_type"], :name => "index_activities_on_target_id_and_target_type"
   add_index "activities", ["user_id"], :name => "index_activities_on_user_id"
+
+  create_table "comments", :force => true do |t|
+    t.string   "comment"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "activity_id"
+  end
 
   create_table "grabs", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -58,6 +66,15 @@ ActiveRecord::Schema.define(:version => 20101011052229) do
 
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "rating"
+    t.text     "review"
+    t.integer  "item_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "timeline_events", :force => true do |t|
     t.string   "event_type"

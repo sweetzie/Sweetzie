@@ -422,3 +422,43 @@ input[type=text], input[type=password] {
 #scan-button {
 	display: none;	
 }
+
+.grabbers a {
+	
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	
+}
+
+.reviews {
+	
+	float: left;
+	
+}
+
+#review-form {
+	
+	background: #dedede;
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	
+}
+
+.reviews ol {
+	
+	
+	
+}
+
+.reviews ol li {
+	
+	border-top: 1px solid #dedede;
+	
+}
+
+.reviews ol li img {
+	
+	float: left;
+	
+}
