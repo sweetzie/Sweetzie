@@ -1,0 +1,13 @@
+<div id="recent-reviews-list">
+	
+	<h3>Your Reviews (<%= user.reviews.count %>)</h3>
+	
+	<ul>
+	<% user.reviews.each do |review| %>
+		<li>
+			<a href="<%= review_path(review) %>"><%= review.item.name %></a>
+		</li>
+	<% end %>
+	</ul>
+	
+</div>

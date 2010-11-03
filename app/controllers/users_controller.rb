@@ -83,4 +83,11 @@ class UsersController < ApplicationController
     render 'show_grabs'
   end
   
+  def reviews
+    @title = "Reviews"
+    @user = User.find_by_login(params[:id])
+    @reviews = @user.reviews
+    render 'show_reviews'
+  end
+  
 end
