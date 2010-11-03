@@ -42,15 +42,19 @@
 	</div>
 	
 	<div id="recent-grab-list">
+		<h3>Total Items Grabbed (<%= current_user.items.count %>)</h3>
+	</div>
+	
+	<div id="recent-reviews-list">
 		
-		<h3>Recent Items (<%= current_user.items.count %>)</h3>
+		<h3>Recent Reviews</h3>
+		
 		<ul>
-		<% current_user.items.each do |i| %>
+		<% current_user.reviews.each do |review| %>
 			<li>
-				<%= link_to "#{i.name}", item_path(i) %>
+				<p>You reviewed <%= review.item.name %></p>
 			</li>
 		<% end %>
 		</ul>
-	</div>
 	
 </div><!-- end right-column -->

@@ -82,6 +82,7 @@ header h1 {
 	font-style: italic;
 	font-weight: bold;
 	margin-left: 10px;
+	display: none;
 	
 }
 
@@ -404,6 +405,13 @@ input[type=text], input[type=password] {
 .activity-feed a, .reviews ol li a {
 	
 	font-weight: bold;
+	text-decoration: none;
+	
+}
+
+.activity-feed a:hover {
+	
+	text-decoration: underline;
 	
 }
 
@@ -432,9 +440,7 @@ input[type=text], input[type=password] {
 }
 
 .reviews {
-	
 	float: left;
-	
 }
 
 #review-form {
@@ -455,4 +461,27 @@ input[type=text], input[type=password] {
 	
 	float: left;
 	
+}
+
+a.review-link {
+	
+	font-weight: normal;
+	
+}
+
+.review-preview, .item-description {
+	
+	float: left;
+	margin-left: 60px;
+	clear: both;
+	color: #8F8F8F;
+	margin-top: -25px;
+	line-height: 1.4em;
+	
+}
+
+.rating {
+	
+	float: right;
+		
 }

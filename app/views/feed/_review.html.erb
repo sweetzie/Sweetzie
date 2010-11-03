@@ -1,4 +1,6 @@
 <li>
+	<% review = find_review(review) %>
+	<% item_review = find_review_item(review) %>
 	<p>
 	<% if user.id == current_user.id %>
 		<%= image_tag current_user.avatar.url(:small) %>
@@ -7,6 +9,7 @@
 		<%= image_tag user.avatar.url(:small) %>
 		<%= link_to user.name, user %>
 	<% end %>
-	reviewed an item. <%= link_to "#{find_review(review)}", review_path(review) %></p>
-	<p class="review-preview"></p>
+	<a class="review-link" href="<%= review_path(review) %>">reviewed</a> <%= link_to "#{item_review.name}", item_path(item_review) %></p>
+	<span class="rating"><%= review.rating %> <%= "star".pluralize %></span>
+	<p class="review-preview"><%= review.review %></p>
 </li>
