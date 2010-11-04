@@ -171,30 +171,23 @@ header ul li a {
 }
 
 .nav li a {
-	
 	margin-left: none;
-	
 }
 
 .dropdown ul {
-	
 	display: none;
 	position: absolute;
 	top: 1.3em;
 	left: 0;
 	z-index: 200;
-	
 }
 
 .dropwdown a:hover {
-	
 	color: #ffffff;
 	text-decoration: underline;
-	
 }
 
 header li:hover ul {
-	
 	display: block;
 	background: #3c3c3c;
 	width: 100px;
@@ -204,47 +197,34 @@ header li:hover ul {
 }
 
 header li:hover ul li {
-	
 	margin: 0;
 	padding: 0px;
 	float: none;
 	text-align: left;
 	background: none;
-	
-	
 }
 
 header li:hover ul li a {
-	
 	color: #ffffff;
 	text-shadow: none;
-	
 }
 
 .left-column {
-	
 	float:left;
 	width: 550px;
-	
 }
 
-.right-column {
-	
+.right-column {	
 	float: left;
 	width: 300px;
 	margin-left: 20px;
-	
-}
-label {
-	
-	margin-bottom: 10px;
-	
 }
 
+label {
+	margin-bottom: 10px;
+}
 
 input[type=text], input[type=password] {
-	
-	
 	padding: 5px;
 	font-size: 1.2em;
 	border: 1px solid #dedede;
@@ -254,36 +234,31 @@ input[type=text], input[type=password] {
 }
 
 .ct-l {
-	
 	font-family: "Lobster", "Helvetica Neue", "Helvetica", "Arial", serif;
 	letter-spacing: 1.8px;
 }
 
 #login-bg {
-	
 	background: #fff;
 	width: 300px;
 	padding: 5px;
 	margin: 0;
 	-webkit-box-shadow: #ccc 1px 1px 1px;
-	
 }
 
 #login-bg h1 {
-	
 	color: #3c3c3c;
 	text-shadow: 0px -1px 0px #000;
-	
 }
 
 .notice {
-	
 	background: #fff4b4;
 	border: 1px solid #f9e889;
 	padding: 5px;
 	text-shadow: none;
 	clear: both;
-	
+	position: absolute;
+	bottom: ;
 }
 
 .user-details {
@@ -296,64 +271,49 @@ input[type=text], input[type=password] {
 }
 
 .user-info {
-	
 /*	background: red;*/
 	float: left;
 	width: 350px;
 	padding-top: 6px;
-	
 }
 
 .user-info img {
-	
 	float: left;
-	
 }
 
 .user-info h3 {
-	
 	float: left;
 	margin-left: 10px;
 	padding-top: 10px;
 }
 
 .user-counts {
-	
 	float: left;
 	background: #e4e4e4;
 	border-top: 1px solid #ccc;
 	border-radius: 5px;
-	
 }
 
 .user-counts a {
-	
 	float: left;
 	padding: 10px;
 	overflow: hidden;
 	text-align: center;
-	
 }
 
 .user-action-buttons {
-	
 	float: right;
 	margin-right: 20px;
 	margin-top: 30px;
-	
 }
 
 #user-following-list, #recent-grab-list {
-	
 	margin-top: 20px;
 	float: left;
 	clear: both;
-	
-	
 }
 
 #user-following-list ul, #recent-grab-list ul {
-	
 	background: #f8f8f8;
 	padding: 10px 0px;
 	float: left;
@@ -363,10 +323,7 @@ input[type=text], input[type=password] {
 }
 
 #user-following-list li {
-	
 	display: inline;
-	width: ;
-	
 }
 
 .activity-feed {
@@ -374,17 +331,13 @@ input[type=text], input[type=password] {
 /*	background: red;*/
 	width: 100%;
 	clear: both;
-	
 }
 
 .activity-feed ol {
-	
 	margin-top: 28px;
-	
 }
 
 .activity-feed li {
-	
 	font-size: .8em;
 	padding: 10px;
 	margin: 5px 0px;
@@ -396,19 +349,14 @@ input[type=text], input[type=password] {
 }
 
 .activity-feed li:hover {
-	
 	background: #f2f2f2;
-	
 }
 
 .activity-feed a {
-	
 	font-weight: bold;
-	
 }
 
 .activity-feed img {
-	
 /*	border: 3px solid #ccc;*/
 /*	border-radius: 5px;*/
 	float: left;
@@ -423,8 +371,30 @@ input[type=text], input[type=password] {
 	display: none;	
 }
 
+.comment-arrow-border {
+	border-color:  transparent transparent #cccccc transparent;
+	border-style: solid;
+	border-width: 11px;
+	height:0;
+	width:0;
+	position:relative;
+	top: 38px;
+	left:60px;
+}
+
+.comment-arrow {
+	border-color:  transparent transparent #dedede transparent;
+	border-style: solid;
+	border-width: 10px;
+	height:0;
+	width:0;
+	position:relative;
+	top: 19px;
+	left:61px;
+}
+
+
 .comments {
-	
 	float: left;
 	clear: both;
 	background: #dedede;
@@ -433,17 +403,15 @@ input[type=text], input[type=password] {
 	margin-top: 10px;
 	padding: 5px;
 	border-top: 1px solid #ccc;
-	
 }
 
 .comments ol {
-	
 	width: 100%;
 	margin: 0px;
+	float: left;
 }
 
 .comments ol li {
-	
 	margin: 0px;
 	padding: 0px;
 	background: transparent;
@@ -452,47 +420,41 @@ input[type=text], input[type=password] {
 	font-size: .9em;
 	border-bottom: 1px solid #f2f2f2;
 	width: 460px;
-	padding: 2px;
+	padding: 4px;
 }
+
 
 .comments ol li:hover {
 	background: transparent;
 }
 
 .comments ol li img, .comments ol li p {
-	
 	float: left;
-	
 }
 
 .comments ol li p {
-	
 	clear: none;
-	
 }
 
 
 .comments ol li span {
-	
 	float: right;
-	
+	color: #a1a1a1;
+	text-shadow: none;
+	font-size: .9em;
 }
 
 .comment-form {
-	
 	float: left;
 	border-top: 2px solid #f2f2f2;
 	padding-top: 2px;
-	
 }
 
 .comment-form input[type=text] {
-	
 	border-radius: 0px;
 	font-size: 1em;
 	margin: 0px;
 	width: 360px;
 	float: left;
 	padding: 5px;
-	
 }

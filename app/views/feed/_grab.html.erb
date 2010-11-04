@@ -8,6 +8,8 @@
 		<%= link_to user.name, user %>
 	<% end %>	
 	 grabbed <%= link_to "#{find_item(item)}", item_path(item) %></p>
+	<div class="comment-arrow-border"></div>
+	<div class="comment-arrow"></div>
 	<div class="comments">
 		<%= render :partial => '/feed/comments_list', :locals => { :activity_id => activity_id } %>
 		<%= render :partial => '/feed/comment_form', :locals => { :activity_id => activity_id } %>
