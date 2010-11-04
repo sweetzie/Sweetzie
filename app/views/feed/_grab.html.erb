@@ -9,17 +9,7 @@
 	<% end %>	
 	 grabbed <%= link_to "#{find_item(item)}", item_path(item) %></p>
 	<div class="comments">
-		<div class="comment-form">
-		<% form_for current_user.comments.build(:activity_id => activity_id) do |f| %>	
-			
-			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<%= f.hidden_field  :activity_id, :value => activity_id %>
-			
-			<%= f.label :comment %>
-			<%= f.text_field :comment %>
-			
-			<%= f.submit "Comment" %>
-		<% end %>
-		</div>
+		<%= render :partial => '/feed/comments_list', :locals => { :activity_id => activity_id } %>
+		<%= render :partial => '/feed/comment_form', :locals => { :activity_id => activity_id } %>
 	</div>
 </li>

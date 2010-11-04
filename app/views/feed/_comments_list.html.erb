@@ -1,0 +1,15 @@
+<ol>
+	<% activity = find_comments(activity_id)%>
+	
+	<% if activity.comments.empty? %>
+		<p>Be the first to comment.</p>
+	<% else %>
+		<% activity.comments.each do |comment| %>
+			<li>
+				<%= image_tag comment.user.avatar.url(:thumb) %>
+				<%= link_to "#{comment.user.name}", user_path(comment.user) %><p><%= comment.comment %></p>
+				<span><%= distance_of_time_in_words(Time.now, comment.created_at) %> ago </span>
+			</li>
+		<% end %>
+	<% end %>
+</ol>

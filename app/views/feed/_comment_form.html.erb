@@ -1,0 +1,11 @@
+<div class="comment-form">
+<% form_for current_user.comments.build(:activity_id => activity_id) do |f| %>	
+		
+	<%= f.hidden_field :user_id, :value => current_user.id %>
+	<%= f.hidden_field  :activity_id, :value => activity_id %>
+		
+	<%= f.text_field :comment %>
+		
+	<%= f.submit "Comment" %>
+<% end %>
+</div>

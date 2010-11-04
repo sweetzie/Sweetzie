@@ -428,20 +428,71 @@ input[type=text], input[type=password] {
 	float: left;
 	clear: both;
 	background: #dedede;
-	width: 465px;
-	margin-left: 60px;
+	width: 470px;
+	margin-left: 50px;
 	margin-top: 10px;
 	padding: 5px;
 	border-top: 1px solid #ccc;
 	
 }
 
+.comments ol {
+	
+	width: 100%;
+	margin: 0px;
+}
+
+.comments ol li {
+	
+	margin: 0px;
+	padding: 0px;
+	background: transparent;
+	float: left;
+	clear: both;
+	font-size: .9em;
+	border-bottom: 1px solid #f2f2f2;
+	width: 460px;
+	padding: 2px;
+}
+
+.comments ol li:hover {
+	background: transparent;
+}
+
+.comments ol li img, .comments ol li p {
+	
+	float: left;
+	
+}
+
+.comments ol li p {
+	
+	clear: none;
+	
+}
+
+
+.comments ol li span {
+	
+	float: right;
+	
+}
+
+.comment-form {
+	
+	float: left;
+	border-top: 2px solid #f2f2f2;
+	padding-top: 2px;
+	
+}
+
 .comment-form input[type=text] {
 	
 	border-radius: 0px;
-	font-size: .8em;
+	font-size: 1em;
 	margin: 0px;
-	border: 1px solid #ccc;
 	width: 360px;
+	float: left;
+	padding: 5px;
 	
 }

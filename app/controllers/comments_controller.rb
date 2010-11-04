@@ -4,6 +4,10 @@ class CommentsController < ApplicationController
   before_filter :get_activity
   
   
+  def new 
+    
+  end 
+  
   def create
     current_user.comment!(@activity)
     redirect_back_or_default('/')
