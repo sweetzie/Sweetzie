@@ -1,26 +1,16 @@
 <div class="left-column">
-	<h1><%= @user.name %></h1>
-	<p><% if logged_in? %><%= render :partial => 'follow_form'%><% end %></p>
 	
-	<ul>
-		<%= link_to "Reviews", reviews_user_path(@user) %>
-		<%= link_to "Followers"%>
-	</ul>
+	<%= render :partial => 'header', :locals => { :user => @user } %>
 	
 	<h2>Recent Activity</h2>
 	
-	
-	
-	<div class="activity-feed">	
-				
+	<div class="activity-feed">		
 		<ol>
 			<% @activities.each do |activity| %>
 				<%= show_feed_item(@user, activity.activity_type, activity.target_id) %>
 			<% end %>
 		</ol>
-		
 		<%= will_paginate @activities %>
-	
 	</div>
 </div>
 

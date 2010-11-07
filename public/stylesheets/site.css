@@ -52,6 +52,7 @@ input[type=submit] {
 	color: #ffffff;
 	text-shadow: none;
 	padding: 8px 20px;
+	-webkit-box-shadow: #69913a 0px -1px 1px;
 
 }
 
@@ -503,5 +504,68 @@ a.review-link {
 #recent-reviews-list a:hover {
 	
 	background: #f2f2f2;
+	
+}
+
+
+/* User Profiles */
+
+#user-nav {
+	
+	float: left;
+	width: 100%;
+/*	background: red;*/
+	text-shadow: none;
+	
+}
+
+#user-nav li {
+	
+	float: left;
+/*	background: blue;*/
+	padding: 10px 15px;
+	/*background: #ccc;*/
+	margin-right: 1px;
+	padding-right: 5px;
+}
+
+#user-nav li a {
+	
+	color: #3c3c3c;
+	text-decoration: none;
+}
+
+#user-nav li span {
+	
+	color: #ffffff;
+	position: relative;
+	top: -10px;
+	font-size: .7em;
+	background: #3c3c3c;
+	padding: 5px 10px;
+	border-radius: 30px;
+	
+}
+
+.user-profile-info {
+	
+	float: left;
+	width: 100%;
+	background: red;
+	margin-bottom: 20px;
+	
+}
+
+.user-profile-info img {
+	
+	float: left;
+	width: 75px;
+	height: 75px;
+}
+
+.user-profile-info h1 {
+	
+	float: left;
+	font-size: 2em;
 	
 }
