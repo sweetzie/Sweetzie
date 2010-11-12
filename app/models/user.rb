@@ -91,8 +91,8 @@ class User < ActiveRecord::Base
   
   ## ------------------- Comments ------------------ ##
   
-  def comment!(activity)
-    comments.create!(:activity_id => activity.id)
+  def comment!(activity, comment)
+    comments.create!(:activity_id => activity.id, :comment => comment[:comment])
   end
   
   

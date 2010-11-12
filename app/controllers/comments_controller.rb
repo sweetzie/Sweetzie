@@ -9,7 +9,8 @@ class CommentsController < ApplicationController
   end 
   
   def create
-    current_user.comment!(@activity)
+    @comment = params[:comment]
+    current_user.comment!(@activity, @comment)
     redirect_back_or_default('/')
       flash[:notice] = "Comment saved!"
   end
