@@ -12,6 +12,7 @@ class Activity < ActiveRecord::Base
   NEW_COMMENT             = 3 # A user makes a comment
   JOINED_SITE             = 4 # A user joins the site
   NEW_ITEM                = 5 # A user creates a new item.
+  NEW_REVIEW              = 6 # A user reviews an item.
   
   def self.add(user, activity_type, target)
     return false if user.blank? or activity_type.blank? or target.blank?

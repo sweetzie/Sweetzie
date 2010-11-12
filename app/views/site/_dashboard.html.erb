@@ -9,10 +9,10 @@
 		<h2>Recently</h2>
 		<ol>
 		<% @activities.each do |activity| %>
-			<% if current_user.following.include?(activity.user) %>
+			<% if @user.following.include?(activity.user) %>
 				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id, activity.id) %>
 			<% end %>
-			<% if activity.user == current_user %>
+			<% if activity.user == @user %>
 				<%= show_feed_item(activity.user, activity.activity_type, activity.target_id, activity.id) %>
 			<% end %>
 			
@@ -27,30 +27,15 @@
 
 <div class="right-column">
 	
-	<p>Welcome <%= current_user.first_name %></p>
+	<p>Welcome <%= @user.first_name %></p>
 	
-	<div id="user-following-list">
-		
-		<h3>Following (<%= current_user.following.count %>)</h3>
-		<ul>
-		<% current_user.following.each do |p| %>
-			<li>
-				<a href="<%= user_path(p) %>"><%= image_tag p.avatar.url(:small) %></a>
-			</li>
-		<% end %>
-		</ul>
-	</div>
+	<%= render :partial => '/users/following_list', :locals => { :user => @user } %>
+	
 	
 	<div id="recent-grab-list">
-		
-		<h3>Recent Items (<%= current_user.items.count %>)</h3>
-		<ul>
-		<% current_user.items.each do |i| %>
-			<li>
-				<%= link_to "#{i.name}", item_path(i) %>
-			</li>
-		<% end %>
-		</ul>
+		<h3>Total Items Grabbed (<%= @user.items.count %>)</h3>
 	</div>
+		
+	<%= render :partial => '/users/reviews_list', :locals => { :user => @user } %>
 	
 </div><!-- end right-column -->

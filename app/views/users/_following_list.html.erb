@@ -1,0 +1,11 @@
+<div class="user-following-list">
+	
+	<h3>Following (<%= user.following.count %>)</h3>
+	<ul>
+	<% user.following.each do |p| %>
+		<li>
+			<a href="<%= user_path(p) %>"><%= image_tag p.avatar.url(:small) %></a>
+		</li>
+	<% end %>
+	</ul>
+</div>

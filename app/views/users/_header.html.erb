@@ -1,0 +1,26 @@
+<div class="user-profile-info">
+	<a href="<%= user_path(user) %>"><%= image_tag user.avatar.url(:small) %></a>
+	<h1><%= link_to "#{user.name}", user_path(user) %></h1>
+</div>
+
+<p><% if logged_in? %><%= render :partial => 'follow_form'%><% end %></p>
+
+<ul id="user-nav">
+	<li><%= link_to_unless_current "History", user_path(user) %></li>
+	<li>
+		<%= link_to_unless_current "Reviews", reviews_user_path(user) %>
+		<span><%= user.reviews.count %></span>
+	</li>
+	<li>
+		<%= link_to_unless_current "Followers", followers_user_path(user) %>
+		<span><%= user.followers.count %></span>
+	</li>
+	<li>
+		<%= link_to_unless_current "Following", following_user_path(user) %>
+		<span><%= user.following.count %></span>
+	</li>
+	<li>
+		<%= link_to_unless_current "Grabs", grabs_user_path(user)%>
+		<span><%= user.grabs.count %></span>
+	</li>
+</ul>

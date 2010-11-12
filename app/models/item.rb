@@ -2,7 +2,7 @@ class Item < ActiveRecord::Base
   
   has_many :grabs
   has_many :users, :through => :grabs
-  
+  has_many :reviews
   
   validates_presence_of :barcode
   

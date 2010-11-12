@@ -5,19 +5,68 @@
 	
 	<%= render 'grab_form' %>
 	
+	
+	<div class="reviews">
+		
+		<h2>Reviews</h2>
+		
+		<div id="review-form">
+		<% form_for @review do |form| %>
+
+			<%= form.hidden_field :user_id, :value => current_user.id %>
+			<%= form.hidden_field :item_id, :value => @item.id %>
+
+			<p>
+				<%= form.label :review %><br />
+				<%= form.text_area :review %>
+			</p>
+
+			<p>
+				<%= form.radio_button  :rating, 1 %> <%= form.label :rating_1, "1" %>  
+				<%= form.radio_button  :rating, 2 %> <%= form.label :rating_2, "2" %>  
+				<%= form.radio_button  :rating, 3 %> <%= form.label :rating_3, "3" %>  
+				<%= form.radio_button  :rating, 4 %> <%= form.label :rating_4, "4" %>  
+				<%= form.radio_button  :rating, 5 %> <%= form.label :rating_5, "5" %>
+			</p>
+
+			<%= form.submit "Review" %>
+
+		<% end %>
+		</div>
+		
+		<% if @item.reviews.empty? %>
+			<p>No one has reviewed this item yet. Be the first!</p>
+		<% else %>
+			<ol>
+			<% @item.reviews.each do |review| %>
+				<li>
+					<%= image_tag review.user.avatar.url(:small) %>
+					<h3><%= link_to "#{review.user.name}", user_path(review.user) %></h3>
+					<p><%= review.review %></p>
+					<span><%= review.rating %></span>
+				</li>
+			<% end %>
+			</ol>
+		<% end %>
+	</div>
+	
+	
 </div>
 
 <div class="right-column">
 	
-	<h2>Grabbers</h2>
+	<div class="grabbers">
+		
+		<h2>Grabbers</h2>
 	
-	<% if @item.users.empty? %>
-		<p>No one has grabbed this item yet!</p>
-		<em>You could be the first.</em>
-	<% else %>
-		<% @item.users.each do |user| %>
-			<p><%= link_to user.name, user %></p>
+		<% if @item.users.empty? %>
+			<p>No one has grabbed this item yet!</p>
+			<em>You could be the first.</em>
+		<% else %>
+			<% @item.users.each do |user| %>
+				<a href="<%= user_path(user) %>"><%= image_tag user.avatar.url(:small) %></a>
+			<% end %>
 		<% end %>
-	<% end %>
 	
+	</div>
 </div>

@@ -1,0 +1,8 @@
+<%= image_tag @review.user.avatar.url(:small) %>
+<p><%= link_to "#{@review.user.name}", user_path(@review.user) %> reviewed <%= link_to "#{@review.item.name}", item_path(@review.item) %></p>
+
+<p><%= @review.item.description %></p>
+
+<p><%= @review.item.name %> has been grabbed <%= @review.item.grabs.count %> <%= "times".pluralize %></p>
+
+<p><%= @review.review %></p>
