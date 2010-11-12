@@ -83,4 +83,11 @@ class UsersController < ApplicationController
     render 'show_grabs'
   end
   
+  def comments
+    @title = "Comments"
+    @user = User.find_by_login(params[:id])
+    @comments = @user.comments
+    render 'show_comments'
+  end  
+  
 end

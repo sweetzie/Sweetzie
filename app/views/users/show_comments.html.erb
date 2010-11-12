@@ -1,0 +1,9 @@
+<%= @title %>
+
+<ol>
+<% @comments.each do |comment| %>
+	<li>
+		<%= comment.comment%>
+	</li>
+<% end %>
+</ol>
