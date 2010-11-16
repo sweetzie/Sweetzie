@@ -9,11 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20101102051158) do
-=======
-ActiveRecord::Schema.define(:version => 20101102225409) do
->>>>>>> reviews
+ActiveRecord::Schema.define(:version => 20101114012819) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",       :null => false
@@ -40,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20101102225409) do
     t.integer  "item_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "comment"
   end
 
   create_table "invitations", :force => true do |t|

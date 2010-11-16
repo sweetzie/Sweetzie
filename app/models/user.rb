@@ -88,8 +88,8 @@ class User < ActiveRecord::Base
   
   # Grab a new item
   
-  def grab!(item)
-    grabs.create!(:item_id => item.id)
+  def grab!(item, comment)
+    grabs.create!(:item_id => item.id, :comment => comment)
   end
   
   ## ------------------- Comments ------------------ ##

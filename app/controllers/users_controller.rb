@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find_by_login(params[:id])
+    @user = User.find_by_login(params[:username])
     @items = @user.items
     @activities = @user.activities.paginate :page => params[:page], :per_page => 15, :order => 'created_at DESC'
   end
