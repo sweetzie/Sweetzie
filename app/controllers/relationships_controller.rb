@@ -6,7 +6,7 @@ class RelationshipsController < ApplicationController
   def create
     #--! If statement needed for if the follow works? !--#
     current_user.follow!(@user)
-    redirect_to @user
+    redirect_to :back
     Activity.add(current_user, Activity::NEW_RELATIONSHIP, @user) # record the activity 
   end
 

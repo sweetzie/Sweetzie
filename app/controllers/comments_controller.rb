@@ -3,11 +3,6 @@ class CommentsController < ApplicationController
   before_filter :login_required
   before_filter :get_activity
   
-  
-  def new 
-    
-  end 
-  
   def create
     @comment = params[:comment]
     current_user.comment!(@activity, @comment)
