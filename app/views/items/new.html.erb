@@ -1,20 +1,20 @@
 <h2>Add an Item</h2>
 
 
-<% form_for @item do |i| %>
+<% form_for @item do |item| %>
 
-	<%= i.hidden_field :creator_id %>
+	<%= item.hidden_field :creator_id %>
 	
-	<%= i.hidden_field :barcode, :value => @barcode %>
+	<%= item.hidden_field :barcode, :value => @barcode %>
 	
 	<p>
-		<%= i.label :name, "Item Name" %><br />
-		<%= i.text_field :name  %>
+		<%= item.label :name, "Item Name" %><br />
+		<%= item.text_field :name  %>
 	</p>
 	
 	<p>
-		<%= i.label :description %><br />
-		<%= i.text_field :description  %>
+		<%= item.label :description %><br />
+		<%= item.text_field :description  %>
 	</p>
 	
 	<p>
