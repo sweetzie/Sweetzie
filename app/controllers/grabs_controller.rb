@@ -8,12 +8,20 @@ class GrabsController < ApplicationController
   before_filter :get_grabbed_item
   
   def create
-    @comment = params[:comment]
-    #--! Does this need an if statement? !--#
-    current_user.grab!(@item, @comment) # grab the item
-    redirect_to @item #redirect to item
-      flash[:notice] = "Successfully grabbed #{@item.name}"
-      Activity.add(current_user, Activity::NEW_GRAB, @item) # record the activity for the feed
+    @grab = Grab.new(params[:grab])
+    if @grab.save
+      flash[:notice] = "WOOO"
+      redirect_to :back
+    else 
+      flash[:notice] = "Something went wrong."
+      redirect_to :back
+    end
+    # @comment = params[:comment]
+    #     #--! Does this need an if statement? !--#
+    #     current_user.grab!(@item, @comment) # grab the item
+    #     redirect_to @item #redirect to item
+    #       flash[:notice] = "Successfully grabbed #{@item.name}"
+    #       Activity.add(current_user, Activity::NEW_GRAB, @item) # record the activity for the feed
   end
   
   private

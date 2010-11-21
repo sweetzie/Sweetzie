@@ -1,9 +1,10 @@
 body {
 	
-	background: #f2f2f2;
+	background: #ffffff;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	color: #3c3c3c;
 	text-shadow: 0px 1px 0px #ffffff;
+	/*border-top: 3px solid #73ac44;*/
 	
 }
 
@@ -13,22 +14,22 @@ ul { list-style-type: none;}
 ol { list-style-type: none;}
 
 #container {
-	
-	width: 900px;
+	background: blue;
+	width: 1100px;
 	margin: 0 auto;
 }
 
 #content {
 	
-	background: #f8f8f8;
+/*	background: #fafafa;*/
 	padding: 10px;
-	-webkit-box-shadow: #1c1c1c 0px 0px 1px;
+/*	-webkit-box-shadow: #1c1c1c 0px 0px 1px;*/
 	z-index: 0;
-	border: 1px solid #ffffff;
+	/*border: 1px solid #ffffff;*/
 	margin-bottom: 20px;
 	float: left;
 	clear: both;
-	width: 870px;
+	width: 1060px;
 	
 }
 
@@ -70,8 +71,8 @@ header h1 {
 	
 	float: left;
 	text-shadow: none;
-	/*font-family: "Georgia", "Times New Roman", "Times", serif;*/
-	/*font-style: italic;*/
+	font-family: "Georgia", "Times New Roman", "Times", serif;
+	font-style: italic;
 	font-weight: bold;
 	margin-left: 10px;
 	
@@ -80,6 +81,7 @@ header h1 {
 header h1 a {
 	
 	text-decoration: none;
+	color: #73ac44;
 	
 }
 
@@ -203,13 +205,17 @@ header li:hover ul li a {
 
 .left-column {
 	float:left;
-	width: 550px;
+	width: 700px;
+	/*background: red;*/
+	border-top: 2px solid #f2f2f2;
 }
 
 .right-column {	
 	float: left;
-	width: 300px;
+	width: 340px;
 	margin-left: 20px;
+	/*background: blue;*/
+	border-top: 2px solid #f2f2f2;
 }
 
 label {
@@ -244,13 +250,16 @@ input[type=text], input[type=password] {
 }
 
 .notice {
-	background: #fff4b4;
-	border: 1px solid #f9e889;
-	padding: 5px;
+	background: #3c3c3c;
+	border-radius: 5px;
+	font-size: .9em;
+	color: #ffffff;
+	padding: 10px;
 	text-shadow: none;
 	clear: both;
-	position: absolute;
-	bottom: ;
+	position: fixed;
+	bottom: 40px;
+	left: 10px;
 }
 
 .user-details {
@@ -309,7 +318,7 @@ input[type=text], input[type=password] {
 /*#user-following-list ul, #recent-grab-list ul {*/
 .user-following-list ul, #recent-grab-list ul {
 	
-	background: #f8f8f8;
+	/*background: #f8f8f8;*/
 	padding: 10px 0px;
 	float: left;
 	clear: both;
@@ -329,21 +338,33 @@ input[type=text], input[type=password] {
 	clear: both;
 }
 
-.activity-feed ol {
-	margin-top: 28px;
+.activity-feed h2 {
+	
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 15px;
+	float: left;
+	
+	
 }
-.activity-feed li {}
+
+.activity-feed ol {
+	float: left;
+	margin-top: 15px;
+	margin-left: 100px;
+	clear: both;
+}
 	
 .activity-feed li, .reviews ol li {
-	
+
 	font-size: .8em;
 	padding: 10px;
 	margin: 5px 0px;
-/*	border-top: 1px solid #ccc;*/
-	background: #f8f8f8;
+	border-top: 1px solid #f2f2f2;
+	/*background: #f8f8f8;*/
 	float: left;
 	clear: both;
-	width: 530px;
+	width: 580px;
 }
 
 .activity-feed li:hover, .reviews ol li:hover {
@@ -411,11 +432,11 @@ input[type=text], input[type=password] {
 	float: left;
 	clear: both;
 	background: #dedede;
-	width: 470px;
+	width: 510px;
 	margin-left: 50px;
 	margin-top: 10px;
 	padding: 5px;
-	border-top: 1px solid #ccc;
+	border: 1px solid #ccc;
 }
 
 .comments ol {
@@ -640,3 +661,66 @@ a.review-link {
 	font-size: 2em;
 	
 }
+
+/* Settings */
+
+
+#settings {
+	
+	/*background: red;*/
+	font-weight: bold;
+	float: left;
+	width: 100%;
+	/*background: green;*/
+}
+
+#settings label {
+
+	display: block;
+	margin-left: 200px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#settings h3 {
+	
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #ccc;
+	text-shadow: none;
+	
+}
+
+#settings input {
+	
+	display: block;
+	margin-left: 200px;
+}
+
+#settings input[type=text] {
+	
+	margin-top: 10px;
+	padding: 12px;
+	font-size: 1em;
+	
+}
+
+#account-settings, #profile-settings {
+	
+	border-top: 1px solid #f2f2f2;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+/*#account-settings {
+	
+	background: red;
+	
+}
+
+#profile-settings {
+	
+	background: blue;
+	
+}*/
