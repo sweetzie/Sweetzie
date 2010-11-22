@@ -1,24 +1,24 @@
 class GrabsController < ApplicationController
   
-  # The grabs controller handles recording of item grabs by users.
-  
-  # Require a user to be logged in.
-  before_filter :login_required
-  # Find the item's details before running the actions
-  before_filter :get_grabbed_item
-  
+  before_filter :get_item
+
   def create
-    @comment = params[:comment]
-    #--! Does this need an if statement? !--#
-    current_user.grab!(@item, @comment) # grab the item
-    redirect_to @item #redirect to item
-      flash[:notice] = "Successfully grabbed #{@item.name}"
-      Activity.add(current_user, Activity::NEW_GRAB, @item) # record the activity for the feed
+    @grab = Grab.new(params[:grab])
+    
+    if @grab.save
+      Activity.add(current_user, Activity::NEW_GRAB, @grab) # record the activity for the feed
+      flash[:notice] = "Thanks for sharing!" #let them know it happened.
+      redirect_to :back #send them back
+    else
+      flash[:notice] = "Something went wrong. Try again in a minute." #flash an error message
+      redirect_to :back # send them back
+    end
   end
   
   private
   
-    def get_grabbed_item
-      @item = Item.find(params[:grab][:item_id]) # find the item
+    def get_item
+      @item = Item.find(params[:grab][:item_id]) # find the activity
     end
+
 end

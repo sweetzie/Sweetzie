@@ -495,7 +495,7 @@ a.review-link {
 	
 }
 
-.review-preview, .item-description {
+.review-preview, .item-description, .grab-preview {
 	
 	float: left;
 	margin-left: 60px;

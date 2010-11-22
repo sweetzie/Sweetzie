@@ -1,5 +1,6 @@
 <li>
-	<% item = find_item(item) %>
+	<% grab = find_grab(grab) %>
+	<% item = find_item(grab.item.id)%>
 	<p>
 	<% if user.id == current_user.id %>
 		<%= image_tag current_user.avatar.url(:small) %>
@@ -8,7 +9,8 @@
 		<%= image_tag user.avatar.url(:small) %>
 		<%= link_to user.name, user %>
 	<% end %>	
-	 grabbed <%= link_to "#{item.name}", item_path(item) %></p>
+	grabbed <%= link_to "#{item.name}", item_path(item) %>.</p>
+	<p class="grab-preview"><%= grab.comment %></p>
 	<div class="comment-arrow-border"></div>
 	<div class="comment-arrow"></div>
 	<div class="comments">
