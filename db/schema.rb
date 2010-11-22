@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101114012819) do
+ActiveRecord::Schema.define(:version => 20101122021324) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id",       :null => false
@@ -32,11 +32,11 @@ ActiveRecord::Schema.define(:version => 20101114012819) do
   end
 
   create_table "grabs", :force => true do |t|
-    t.integer  "user_id",    :null => false
-    t.integer  "item_id",    :null => false
+    t.integer  "user_id"
+    t.integer  "item_id"
+    t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "comment"
   end
 
   create_table "invitations", :force => true do |t|
