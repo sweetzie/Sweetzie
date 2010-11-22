@@ -1,5 +1,0 @@
-<% form_for current_user.grabs.build(:item_id => @item.id) do |f| %>
-	<%= f.hidden_field :item_id %></div>
-	<%= f.text_area :comment %>
-	<div class="actions"><%= f.submit "Grab" %></div>
-<% end %>
