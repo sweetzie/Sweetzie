@@ -1,84 +1,30 @@
 <div class="left-column">
+	
 	<h1><%= @item.name %></h1>
 
 	<p><%= @item.description %></p>
 	
-	
-	<div class="grab">
-		<% form_for @grab do |grab| %>
-		
-			<%= grab.hidden_field :user_id, :value => current_user.id %>
-			<%= grab.hidden_field :item_id, :value => @item.id %>
-			
-			<%= grab.label :comment, "Share your thoughts..." %>
-			<%= grab.text_field :comment %>
-			
-			<%= grab.submit "Share" %>
-		
-		<% end %>
-	</div>
+	<%= render :partial => '/grabs/form', :locals => { :item => @item, :grab => @grab } %>
 	
 	<div class="reviews">
 		
 		<h2>Reviews</h2>
 		
-		<div id="review-form">
-		<% form_for @review do |form| %>
-
-			<%= form.hidden_field :user_id, :value => current_user.id %>
-			<%= form.hidden_field :item_id, :value => @item.id %>
-
-			<p>
-				<%= form.label :review %><br />
-				<%= form.text_area :review %>
-			</p>
-
-			<p>
-				<%= form.radio_button  :rating, 1 %> <%= form.label :rating_1, "1" %>  
-				<%= form.radio_button  :rating, 2 %> <%= form.label :rating_2, "2" %>  
-				<%= form.radio_button  :rating, 3 %> <%= form.label :rating_3, "3" %>  
-				<%= form.radio_button  :rating, 4 %> <%= form.label :rating_4, "4" %>  
-				<%= form.radio_button  :rating, 5 %> <%= form.label :rating_5, "5" %>
-			</p>
-
-			<%= form.submit "Review" %>
-
-		<% end %>
-		</div>
+		<%= render :partial => '/reviews/form', :locals => { :item => @item, :review => @review } %>
 		
-		<% if @item.reviews.empty? %>
-			<p>No one has reviewed this item yet. Be the first!</p>
-		<% else %>
-			<ol>
-			<% @item.reviews.each do |review| %>
-				<li>
-					<%= image_tag review.user.avatar.url(:small) %>
-					<h3><%= link_to "#{review.user.name}", user_path(review.user) %></h3>
-					<p><%= review.review %></p>
-					<span><%= review.rating %></span>
-				</li>
-			<% end %>
-			</ol>
-		<% end %>
-	</div>
+		<%= render :partial => '/reviews/list', :locals => { :item => @item } %>
 	
+	</div><!-- end reviews -->
 	
-</div>
+</div><!-- end left-column -->
 
 <div class="right-column">
 	
 	<div class="grabbers">
 		
 		<h2>Grabbers</h2>
-	
-		<% if @item.users.empty? %>
-			<p>No one has grabbed this item yet!</p>
-			<em>You could be the first.</em>
-		<% else %>
-			<% @item.users.each do |user| %>
-				<a href="<%= user_path(user) %>"><%= image_tag user.avatar.url(:small) %></a>
-			<% end %>
-		<% end %>
+		
+		<%= render :partial => '/grabs/list', :locals => { :item => @item } %>
 	
 	</div>
-</div>
+</div><!-- end right-column -->

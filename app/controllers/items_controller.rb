@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
   
   def show
     @item = Item.find_by_id(params[:id]) #find the particular item
-    @review = Review.new #instantiate a new review
+    @review = current_user.reviews.build
     @grab = current_user.grabs.build
   end
   

@@ -1,0 +1,13 @@
+<div class="grab">
+	<% form_for grab do |grab| %>
+	
+		<%= grab.hidden_field :user_id, :value => current_user.id %>
+		<%= grab.hidden_field :item_id, :value => item.id %>
+		
+		<%= grab.label :comment, "Share your thoughts..." %>
+		<%= grab.text_field :comment %>
+		
+		<%= grab.submit "Share" %>
+	
+	<% end %>
+</div>

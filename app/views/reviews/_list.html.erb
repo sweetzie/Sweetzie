@@ -1,0 +1,14 @@
+<% if item.reviews.empty? %>
+	<p>No one has reviewed this item yet. Be the first!</p>
+<% else %>
+	<ol>
+	<% item.reviews.each do |review| %>
+		<li>
+			<%= image_tag review.user.avatar.url(:small) %>
+			<h3><%= link_to "#{review.user.name}", user_path(review.user) %></h3>
+			<p><%= review.review %></p>
+			<span><%= review.rating %></span>
+		</li>
+	<% end %>
+	</ol>
+<% end %>

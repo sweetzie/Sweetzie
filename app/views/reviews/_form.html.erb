@@ -1,0 +1,23 @@
+<div id="review-form">
+	<% form_for review do |form| %>
+
+		<%= form.hidden_field :user_id, :value => current_user.id %>
+		<%= form.hidden_field :item_id, :value => item.id %>
+
+		<p>
+			<%= form.label :review %><br />
+			<%= form.text_area :review %>
+		</p>
+
+		<p>
+			<%= form.radio_button  :rating, 1 %> <%= form.label :rating_1, "1" %>  
+			<%= form.radio_button  :rating, 2 %> <%= form.label :rating_2, "2" %>  
+			<%= form.radio_button  :rating, 3 %> <%= form.label :rating_3, "3" %>  
+			<%= form.radio_button  :rating, 4 %> <%= form.label :rating_4, "4" %>  
+			<%= form.radio_button  :rating, 5 %> <%= form.label :rating_5, "5" %>
+		</p>
+
+		<%= form.submit "Review" %>
+
+	<% end %>
+</div>
